@@ -1,0 +1,68 @@
+{
+  "name": "@tmrxjd/towerai",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Reusable TrackerAI core and toolchain extracted from The Tower Run Tracker.",
+  "license": "BUSL-1.1",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TmRxJD/TowerAI.git"
+  },
+  "homepage": "https://github.com/TmRxJD/TowerAI",
+  "bugs": {
+    "url": "https://github.com/TmRxJD/TowerAI/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true})\"",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "require": "./dist/core/index.js",
+      "default": "./dist/core/index.js"
+    },
+    "./tools": {
+      "types": "./dist/tools/index.d.ts",
+      "require": "./dist/tools/index.js",
+      "default": "./dist/tools/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "core": [
+        "dist/core/index.d.ts"
+      ],
+      "tools": [
+        "dist/tools/index.d.ts"
+      ],
+      "*": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@tmrxjd/platform": "^0.1.8",
+    "pako": "^2.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3"
+  },
+  "packageManager": "pnpm@10.8.1"
+}
