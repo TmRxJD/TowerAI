@@ -143,6 +143,8 @@ function deriveLatencyMs(startedAtIso: string, finishedAtIso: string, fallbackMs
   return Math.max(0, finishedMs - startedMs)
 }
 
+// Director sessions grade turn executors after the fact so host apps can keep
+// their prompt runtime simple and still get deterministic regression signals.
 function evaluateStep<
   TTrace extends TowerAiTurnTrace,
   TGuardrails extends Record<string, unknown>,

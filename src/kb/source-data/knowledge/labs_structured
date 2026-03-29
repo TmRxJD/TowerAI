@@ -1,0 +1,148 @@
+# Labs Structured Reference
+
+This file reorganizes lab knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/labs for side-by-side comparison.
+
+Mechanic: Labs
+Type: System
+Domain: Research
+Section: Labs
+Category: Progression
+Aliases: none.
+Definition: Labs are research upgrades that improve scaling, caps, or specialized mechanics over time.
+Behavior:
+Labs are researched over time instead of purchased instantly.
+Most labs are unlocked in Milestones before they can be researched.
+The labs page includes research management features and quality-of-life tools.
+
+Mechanic: Lab Switching
+Type: Research Rule
+Domain: Labs
+Section: Labs
+Category: Research Management
+Aliases: switching labs
+Definition: Lab Switching lets a player swap the active research to another lab.
+Behavior:
+When a lab is switched away from, spent coins are refunded.
+Research progress is preserved and shown as green lab time.
+When that lab is resumed later, the coins must be paid again.
+
+Mechanic: Auto Research
+Type: Automation Rule
+Domain: Labs
+Section: Labs
+Category: Research Management
+Aliases: auto lab; auto-research
+Definition: Auto Research automatically starts the next level of the current lab after the active level completes.
+Behavior:
+Auto Research is toggled from the small clock or timer icon to the left of the progress bar.
+Auto Research only queues the next level of the same current lab.
+
+Mechanic: Lab Search
+Type: Quality of Life
+Domain: Labs
+Section: Labs
+Category: Navigation
+Aliases: search labs
+Definition: Lab Search filters labs by name so the player can find related labs without scrolling.
+Behavior:
+Lab Search is used when selecting a new lab.
+Typing a lab name in the search bar narrows the visible lab list.
+
+Mechanic: Lab History
+Type: Quality of Life
+Domain: Labs
+Section: Labs
+Category: Tracking
+Aliases: research history
+Definition: Lab History shows a chronological list of completed labs and their completion timestamps.
+Behavior:
+Lab History is accessed from the History tab while selecting a new lab.
+The list shows labs in completion order together with the date and time each was completed.
+
+Mechanic: Lab Slots
+Type: Capacity
+Domain: Gems
+Section: Labs
+Category: Research Capacity
+Aliases: number of labs; lab count
+Definition: Lab Slots determine how many labs can be researched in parallel.
+Behavior:
+The first lab slot unlocks in Milestones at Tier 1 Wave 30.
+Players start with one slot and can unlock up to five total lab slots.
+The total Gem cost to reach five slots is 4,900 Gems.
+
+Mechanic: Lab Slot Costs
+Type: Cost Ladder
+Domain: Gems
+Section: Labs
+Category: Research Capacity
+Aliases: lab slot costs
+Definition: Lab Slot Costs are the Gem costs for each lab slot unlock.
+Costs:
+Lab slot 1 is free.
+Lab slot 2 costs 100 Gems.
+Lab slot 3 costs 400 Gems.
+Lab slot 4 costs 1,400 Gems.
+Lab slot 5 costs 3,000 Gems.
+
+Mechanic: Lab Rushing
+Type: Time Skip
+Domain: Gems
+Section: Labs
+Category: Time Acceleration
+Aliases: rushing labs; lab rush
+Definition: Lab Rushing skips the entire remaining lab time by spending Gems.
+Behavior:
+Lab Rushing only skips the full remaining time and does not partially rush a lab.
+Longer lab times have built-in discounts, so Gem cost per unit time becomes cheaper on long researches.
+Gold boxing labs increases Gem rush efficiency, making rushing require fewer Gems.
+
+Mechanic: Lab Boosting
+Type: Time Acceleration
+Domain: Elite Cells
+Section: Labs
+Category: Time Acceleration
+Aliases: lab boosts; speed up labs
+Definition: Lab Boosting spends Elite Cells to temporarily accelerate research speed on active labs.
+Behavior:
+Labs can be boosted to 1.5x, 2x, 3x, 4x, 5x, 6x, 7x, or 8x.
+Boost durations are 1 hour, 8 hours, or 24 hours.
+The player selects Speed Up, then a duration, then a multiplier, and the game shows the Elite Cell cost.
+Lab boosts use flat-rate costs by multiplier and duration since v25.5.
+Higher multipliers cost disproportionately more than the extra speed they provide, so spreading boosts across several labs is often more efficient than boosting one lab harder.
+Lab boosts can be configured to auto-queue when completed.
+Lab boosts only tick while a lab is slotted for research.
+
+Mechanic: Lab Boost Costs
+Type: Cost Table
+Domain: Elite Cells
+Section: Labs
+Category: Time Acceleration
+Aliases: speed up costs
+Definition: Lab Boost Costs are the Elite Cell costs for each boost multiplier and duration pair.
+Costs:
+1.5x for 1 hour costs 15 Elite Cells for one lab and 75 for all labs.
+1.5x for 8 hours costs 120 Elite Cells for one lab and 600 for all labs.
+1.5x for 24 hours costs 360 Elite Cells for one lab and 1,800 for all labs.
+2x for 1 hour costs 100 Elite Cells for one lab and 500 for all labs.
+2x for 8 hours costs 800 Elite Cells for one lab and 4,000 for all labs.
+2x for 24 hours costs 2,400 Elite Cells for one lab and 12,000 for all labs.
+3x for 1 hour costs 840 Elite Cells for one lab and 4,200 for all labs.
+3x for 8 hours costs 6,720 Elite Cells for one lab and 33,600 for all labs.
+3x for 24 hours costs 20,160 Elite Cells for one lab and 100,800 for all labs.
+4x for 1 hour costs 3,360 Elite Cells for one lab and 16,800 for all labs.
+4x for 8 hours costs 26,880 Elite Cells for one lab and 134,400 for all labs.
+4x for 24 hours costs 80,640 Elite Cells for one lab and 403,200 for all labs.
+5x for 1 hour costs 11,900 Elite Cells for one lab and 59,500 for all labs.
+5x for 8 hours costs 95,200 Elite Cells for one lab and 476,000 for all labs.
+5x for 24 hours costs 285,600 Elite Cells for one lab and 1,428,000 for all labs.
+6x for 1 hour costs 60,000 Elite Cells for one lab and 300,000 for all labs.
+6x for 8 hours costs 480,000 Elite Cells for one lab and 2,400,000 for all labs.
+6x for 24 hours costs 1,440,000 Elite Cells for one lab and 7,200,000 for all labs.
+7x for 1 hour costs 250,000 Elite Cells for one lab and 1,250,000 for all labs.
+7x for 8 hours costs 2,000,000 Elite Cells for one lab and 10,000,000 for all labs.
+7x for 24 hours costs 6,000,000 Elite Cells for one lab and 30,000,000 for all labs.
+8x for 1 hour costs 1,000,000 Elite Cells for one lab and 5,000,000 for all labs.
+8x for 8 hours costs 8,000,000 Elite Cells for one lab and 40,000,000 for all labs.
+8x for 24 hours costs 24,000,000 Elite Cells for one lab and 120,000,000 for all labs.

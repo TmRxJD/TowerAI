@@ -1,6 +1,6 @@
 {
   "name": "@tmrxjd/towerai",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Reusable TrackerAI core and toolchain extracted from The Tower Run Tracker.",
   "license": "BUSL-1.1",
@@ -16,26 +16,54 @@
     "url": "https://github.com/TmRxJD/TowerAI/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "scripts": {
+    "dev": "vite",
+    "playground:dev": "vite",
+    "playground:build": "vite build",
+    "playground:preview": "vite preview",
+    "playground:smoke": "pnpm run build && pnpm run playground:build && node scripts/playground-smoke.mjs",
     "build": "tsc -p tsconfig.build.json",
-    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true})\"",
-    "prepublishOnly": "pnpm run clean && pnpm run build"
+    "type-check": "tsc -p tsconfig.build.json --noEmit",
+    "lint": "eslint src playground scripts eslint.config.mjs",
+    "kb:validate:canonical": "pnpm run build && node scripts/validate-canonical-kb.mjs",
+    "kb:build:canonical": "pnpm run build && node scripts/build-canonical-kb.mjs",
+    "kb:publish:artifacts": "pnpm run build && node scripts/publish-kb-artifacts.mjs",
+    "check:tool-contracts": "pnpm run build && node scripts/check-tool-contracts.mjs",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});fs.rmSync('playground-dist',{recursive:true,force:true})\"",
+    "validate:standalone": "pnpm run clean && pnpm run build && node scripts/check-tool-contracts.mjs && pnpm run playground:build && node scripts/validate-standalone.mjs",
+    "prepublishOnly": "pnpm run lint && pnpm run validate:standalone"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
       "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./core": {
       "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
       "require": "./dist/core/index.js",
       "default": "./dist/core/index.js"
     },
+    "./game-data": {
+      "types": "./dist/game-data/index.d.ts",
+      "import": "./dist/game-data/index.js",
+      "require": "./dist/game-data/index.js",
+      "default": "./dist/game-data/index.js"
+    },
+    "./kb": {
+      "types": "./dist/kb/index.d.ts",
+      "import": "./dist/kb/index.js",
+      "require": "./dist/kb/index.js",
+      "default": "./dist/kb/index.js"
+    },
     "./tools": {
       "types": "./dist/tools/index.d.ts",
+      "import": "./dist/tools/index.js",
       "require": "./dist/tools/index.js",
       "default": "./dist/tools/index.js"
     }
@@ -44,6 +72,12 @@
     "*": {
       "core": [
         "dist/core/index.d.ts"
+      ],
+      "game-data": [
+        "dist/game-data/index.d.ts"
+      ],
+      "kb": [
+        "dist/kb/index.d.ts"
       ],
       "tools": [
         "dist/tools/index.d.ts"
@@ -54,7 +88,11 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "artifacts",
+    "scripts",
+    "src/game-data",
+    "src/kb"
   ],
   "dependencies": {
     "@tmrxjd/platform": "^0.1.8",
@@ -62,7 +100,16 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "typescript": "~5.8.3"
+    "@huggingface/transformers": "^3.7.6",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "katex": "^0.16.44",
+    "markdown-it": "^14.1.1",
+    "openai": "^6.33.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.57.2",
+    "vite": "^8.0.3"
   },
   "packageManager": "pnpm@10.8.1"
 }

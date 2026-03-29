@@ -1,6 +1,8 @@
 import { ungzip } from 'pako'
 
-export type TowerAiKbArtifactProviderId = string
+export const DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER = 'gte-small' as const
+
+export type TowerAiKbArtifactProviderId = typeof DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER
 
 export type TowerAiKbArtifactBundle = {
   contractVersion: 'trackerai-kb-artifact-cache-v1'
@@ -81,7 +83,8 @@ export type TowerAiKbArtifactLogger = {
 
 export type TowerAiLoadKbArtifactBundleOptions = {
   forceRefresh?: boolean
-  provider?: TowerAiKbArtifactProviderId
+  provider?: TowerAiKbArtifactProviderId | string
+  skipLocalArtifacts?: boolean
   repoConfig?: TowerAiKbArtifactRepoConfig | null
   repoManifest?: TowerAiKbArtifactRepoManifest | null
   readCache?: TowerAiKbArtifactCacheReader
@@ -94,7 +97,10 @@ export type TowerAiLoadKbArtifactBundleOptions = {
 
 export const DEFAULT_TOWER_AI_KB_ARTIFACT_CACHE_ID_PREFIX = 'tracker-ai-kb-artifact-cache-v1'
 export const DEFAULT_TOWER_AI_KB_ARTIFACT_PUBLIC_BASE_PATH = '/knowledge/trackerai-kb'
-export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_MANIFEST_URL = 'https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/manifest.json'
+export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_OWNER = 'TmRxJD'
+export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_NAME = 'TowerAI'
+export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_REF = '5afa9b71d9b5c8bd43b71c43b21d8b1861119054'
+export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_MANIFEST_URL = `https://raw.githubusercontent.com/${DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_OWNER}/${DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_NAME}/${DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_REF}/artifacts/kb/manifest.json`
 export const DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_CONFIG: TowerAiKbArtifactRepoConfig = {
   manifestUrl: DEFAULT_TOWER_AI_KB_ARTIFACT_REPO_MANIFEST_URL,
 }
@@ -111,19 +117,32 @@ function getFetchImpl(fetchImpl?: TowerAiKbArtifactFetch): TowerAiKbArtifactFetc
   return resolved as TowerAiKbArtifactFetch
 }
 
+function resolveTowerAiKbArtifactProvider(providerLike?: string): TowerAiKbArtifactProviderId {
+  const normalizedProvider = String(providerLike || '').trim()
+  if (!normalizedProvider) {
+    return DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER
+  }
+
+  if (normalizedProvider !== DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER) {
+    throw new Error(`TowerAI only supports ${DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER} semantic artifacts. Received: ${normalizedProvider}`)
+  }
+
+  return DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER
+}
+
 export function getTowerAiKbArtifactCacheId(
-  provider: TowerAiKbArtifactProviderId,
+  provider: TowerAiKbArtifactProviderId | string,
   cacheIdPrefix = DEFAULT_TOWER_AI_KB_ARTIFACT_CACHE_ID_PREFIX,
 ): string {
-  return `${cacheIdPrefix}:${String(provider || '').trim() || 'gte-small'}`
+  return `${cacheIdPrefix}:${resolveTowerAiKbArtifactProvider(provider)}`
 }
 
 export function buildTowerAiKbLocalArtifactConfig(
-  provider: TowerAiKbArtifactProviderId,
+  provider: TowerAiKbArtifactProviderId | string,
   basePath = DEFAULT_TOWER_AI_KB_ARTIFACT_PUBLIC_BASE_PATH,
 ): TowerAiKbLocalArtifactConfig {
   const normalizedBasePath = String(basePath || DEFAULT_TOWER_AI_KB_ARTIFACT_PUBLIC_BASE_PATH).replace(/[\\/]+$/, '')
-  const normalizedProvider = String(provider || '').trim() || 'gte-small'
+  const normalizedProvider = resolveTowerAiKbArtifactProvider(provider)
   const providerBasePath = `${normalizedBasePath}/${normalizedProvider}`
   return {
     versionUrl: `${providerBasePath}/trackerai-kb.version.txt`,
@@ -157,10 +176,17 @@ export function unwrapTowerAiCachedKbArtifactBundle(record: unknown): TowerAiKbA
   }
 }
 
+// Some hosts serve the artifact JSON files with gzip content regardless of the
+// file extension, so bundle loading must inspect bytes instead of assuming text.
 function decodeTowerAiDownloadPayload(buffer: ArrayBuffer): string {
   const bytes = new Uint8Array(buffer)
   const isGzip = bytes.length >= 2 && bytes[0] === 0x1f && bytes[1] === 0x8b
-  const decodedBytes = isGzip ? ungzip(bytes) : bytes
+  const decodedValue = isGzip ? ungzip(bytes) : bytes
+  const decodedBytes: Uint8Array = typeof decodedValue === 'string'
+    ? new TextEncoder().encode(decodedValue)
+    : decodedValue instanceof Uint8Array
+      ? decodedValue
+      : new Uint8Array(0)
   return new TextDecoder('utf-8').decode(decodedBytes)
 }
 
@@ -379,27 +405,29 @@ async function tryLoadRepoBundle(
 }
 
 export async function loadTowerAiKbArtifactBundle(options: TowerAiLoadKbArtifactBundleOptions = {}): Promise<TowerAiKbArtifactBundle | null> {
-  const provider = String(options.provider || 'gte-small').trim() || 'gte-small'
+  const provider = resolveTowerAiKbArtifactProvider(options.provider)
   const cacheIdPrefix = String(options.cacheIdPrefix || DEFAULT_TOWER_AI_KB_ARTIFACT_CACHE_ID_PREFIX).trim() || DEFAULT_TOWER_AI_KB_ARTIFACT_CACHE_ID_PREFIX
   const fetchImpl = getFetchImpl(options.fetchImpl)
   const logger = getLogger(options.logger)
   const cachedBundle = await readCachedBundle(provider, options.readCache, cacheIdPrefix)
 
-  try {
-    const localBundle = await tryLoadLocalBundle(
-      provider,
-      options.forceRefresh === true,
-      cachedBundle,
-      fetchImpl,
-      options.publicBasePath || DEFAULT_TOWER_AI_KB_ARTIFACT_PUBLIC_BASE_PATH,
-      options.writeCache,
-      cacheIdPrefix,
-    )
-    if (localBundle) {
-      return localBundle
+  if (options.skipLocalArtifacts !== true) {
+    try {
+      const localBundle = await tryLoadLocalBundle(
+        provider,
+        options.forceRefresh === true,
+        cachedBundle,
+        fetchImpl,
+        options.publicBasePath || DEFAULT_TOWER_AI_KB_ARTIFACT_PUBLIC_BASE_PATH,
+        options.writeCache,
+        cacheIdPrefix,
+      )
+      if (localBundle) {
+        return localBundle
+      }
+    } catch (error) {
+      logger.warn?.(`[towerai] Failed to sync local KB artifact bundle for ${provider}. Falling back to repo bundle handling.`, error)
     }
-  } catch (error) {
-    logger.warn?.(`[towerai] Failed to sync local KB artifact bundle for ${provider}. Falling back to repo bundle handling.`, error)
   }
 
   const repoManifestUrl = String(

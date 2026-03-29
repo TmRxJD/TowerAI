@@ -1,0 +1,119 @@
+import workshopData from '@tmrxjd/platform/tools/workshop.json'
+
+export type WorkshopCategory = 'attack' | 'defense' | 'utility'
+
+export interface WorkshopLevelEntry {
+  level: number
+  value: number
+  cash: number
+  coins: number
+}
+
+export interface WorkshopStatDefinition {
+  key: string
+  label: string
+  category: WorkshopCategory
+  levels: WorkshopLevelEntry[]
+  minLevel: number
+  maxLevel: number
+}
+
+const CATEGORY_STATS: Record<WorkshopCategory, Array<{ label: string; key: string }>> = {
+  attack: [
+    { label: 'Damage', key: 'Damage' },
+    { label: 'Attack Speed', key: 'Attack Speed' },
+    { label: 'Critical Chance', key: 'Critical Chance' },
+    { label: 'Critical Factor', key: 'Critical Factor' },
+    { label: 'Range', key: 'Range' },
+    { label: 'Damage / Meter', key: 'Damage / Meter' },
+    { label: 'Multishot Chance', key: 'Multishot Chance' },
+    { label: 'Multishot Targets', key: 'Multishot Targets' },
+    { label: 'Rapid Fire Chance', key: 'Rapid Fire Chance' },
+    { label: 'Rapid Fire Duration', key: 'Rapid Fire Duration' },
+    { label: 'Bounce Shot Chance', key: 'Bounce Shot Chance' },
+    { label: 'Bounce Shot Targets', key: 'Bounce Shot Targets' },
+    { label: 'Bounce Shot Range', key: 'Bounce Shot Range' },
+    { label: 'Super Crit Chance', key: 'Super Crit Chance' },
+    { label: 'Super Crit Mult', key: 'Super Crit Mult' },
+    { label: 'Rend Armor Chance', key: 'Rend Armor Chance' },
+    { label: 'Rend Armor Mult', key: 'Rend Armor Mult' },
+  ],
+  defense: [
+    { label: 'Health', key: 'Health' },
+    { label: 'Health Regen', key: 'Health Regen' },
+    { label: 'Defense %', key: 'Defense Percent' },
+    { label: 'Defense Absolute', key: 'Defense Absolute' },
+    { label: 'Thorn Damage', key: 'Thorns' },
+    { label: 'Lifesteal', key: 'Lifesteal' },
+    { label: 'Knockback Chance', key: 'Knockback Chance' },
+    { label: 'Knockback Force', key: 'Knockback Force' },
+    { label: 'Orb Speed', key: 'Orb Speed' },
+    { label: 'Orbs', key: 'Orbs' },
+    { label: 'Shockwave Size', key: 'Shockwave Size' },
+    { label: 'Shockwave Frequency', key: 'Shockwave Frequency' },
+    { label: 'Land Mine Chance', key: 'Land Mine Chance' },
+    { label: 'Land Mine Damage', key: 'Land Mine Damage' },
+    { label: 'Land Mine Radius', key: 'Land Mine Radius' },
+    { label: 'Wall Health', key: 'Wall Health' },
+    { label: 'Wall Rebuild', key: 'Wall Rebuild' },
+  ],
+  utility: [
+    { label: 'Cash Bonus', key: 'Cash Bonus' },
+    { label: 'Cash / Wave', key: 'Cash / Wave' },
+    { label: 'Coins / Kill Bonus', key: 'Coins / Kill Bonus' },
+    { label: 'Coins / Wave', key: 'Coins / Wave' },
+    { label: 'Free Attack Upgrade', key: 'Free Attack Upgrade' },
+    { label: 'Free Defense Upgrade', key: 'Free Defense Upgrade' },
+    { label: 'Free Utility Upgrade', key: 'Free Utility Upgrade' },
+    { label: 'Interest / Wave', key: 'Interest / Wave' },
+    { label: 'Recovery Amount', key: 'Recovery Amount' },
+    { label: 'Max Recovery', key: 'Max Recovery' },
+    { label: 'Package Chance', key: 'Package Chance' },
+    { label: 'Enemy Attack Level Skip', key: 'Enemy Attack Level Skip' },
+    { label: 'Enemy Health Level Skip', key: 'Enemy Health Level Skip' },
+  ],
+}
+
+function toNumber(value: unknown): number {
+  const next = Number(value)
+  return Number.isFinite(next) ? next : 0
+}
+
+function buildStatDefinition(category: WorkshopCategory, label: string, key: string): WorkshopStatDefinition | null {
+  const raw = (workshopData as Record<string, unknown>)[key]
+  if (!raw || typeof raw !== 'object') return null
+
+  const levels = Object.entries(raw as Record<string, unknown>)
+    .map(([levelKey, payload]) => {
+      const level = Number(levelKey)
+      const objectPayload = payload && typeof payload === 'object' ? payload as Record<string, unknown> : {}
+      return {
+        level,
+        value: toNumber(objectPayload['value']),
+        cash: toNumber(objectPayload['cash']),
+        coins: toNumber(objectPayload['coins']),
+      }
+    })
+    .filter(entry => Number.isFinite(entry.level))
+    .sort((left, right) => left.level - right.level)
+
+  if (levels.length === 0) return null
+
+  return {
+    key,
+    label,
+    category,
+    levels,
+    minLevel: levels[0].level,
+    maxLevel: levels[levels.length - 1].level,
+  }
+}
+
+const WORKSHOP_STAT_DEFINITIONS: WorkshopStatDefinition[] = (Object.entries(CATEGORY_STATS) as Array<[WorkshopCategory, Array<{ label: string; key: string }>]> )
+  .flatMap(([category, stats]) => stats
+    .map(stat => buildStatDefinition(category, stat.label, stat.key))
+    .filter((value): value is WorkshopStatDefinition => Boolean(value)))
+
+export function getWorkshopSiteStatDefinitions(): WorkshopStatDefinition[] {
+  return WORKSHOP_STAT_DEFINITIONS
+}

@@ -1,0 +1,414 @@
+Ultimate Weapons Structured Reference
+This file reorganizes Ultimate Weapon knowledge into the same keyed mechanic format used by the Workshop source.
+The original raw source remains preserved in public/knowledge/ultimate_weapons for side-by-side comparison.
+
+Mechanic: Ultimate Weapons
+Type: System
+Category: Workshop
+Aliases: uw
+Disambiguation: This entry is about the Ultimate Weapons system itself, not an individual weapon's stat table, a single UW+ ability, or unrelated workshop stats.
+Definition: Ultimate Weapons are workshop-owned systems purchased with Power Stones. Each unlocked Ultimate Weapon has three base upgrade stats, all owned Ultimate Weapons can run in the same round, and Ultimate Weapon Plus adds a second layer of upgrades after the full set is unlocked.
+Formula:
+Ultimate Weapon Damage = UW Multiplier * Core Module Multiplier * Damage * (1 + Critical Factor * Critical Chance) * (1 + Super Crit Mult * Super Crit Chance * Critical Chance).
+Critical Ultimate Weapon Damage with Ultimate Crit = Ultimate Weapon Damage * Critical Factor.
+Workshop:
+Purchasing: Ultimate Weapons are bought with Power Stones. Each purchase shows 3 random remaining weapons with equal odds, and closing the menu without buying keeps the same offer.
+Costs: 1st through 9th weapon costs are 5, 50, 150, 300, 800, 1250, 1750, 2400, and 3000 stones for 9705 total.
+Usage: All owned and perk-granted Ultimate Weapons can run together in a round. They auto-activate when cooldown hits zero, and the cooldown resets immediately even if the previous activation is still active.
+Toggle limit: Turning a UW off and back on resets its cooldown, and UWs can only be toggled 40 times in a run.
+Enhancements: Ultimate Weapon Plus unlocks after all 9 base Ultimate Weapons are owned. Unlock costs increase by owned UW+ count: 500, 625, 750, 975, 1250, 1650, 2200, 2900, 3800. Each UW+ ability starts at level 0 and follows one of the documented cost trees.
+Labs: Each weapon has its own lab support listed on the weapon entry.
+Cards: Ultimate Crit can make damage-dealing Ultimate Weapons crit using workshop Critical Factor. It does not apply to % based damage.
+Masteries: None.
+Modules:
+Core module substats directly modify named Ultimate Weapon stats and are listed on each weapon entry. Damage-dealing UWs also inherit shared Workshop-stat module boosts, so Cannon Critical Chance, Critical Factor, and Super Crit substats, plus other module effects that multiply tower damage, can raise UW damage through the shared formula.
+Unique modules: Multiverse Nexus synchronizes Death Wave, Golden Tower, and Black Hole and sets their shared cooldown to the average of the three with Epic +20s, Legendary +10s, Mythic +1s, and Ancestral -10s. Galaxy Compressor, a Generator unique module rather than a Core unique module, also affects cooldown-based UWs by reducing their cooldowns by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral. Some weapons also take direct support from other module families, such as Space Displacer feeding Inner Land Mines.
+Relics: Global relic bonus pool includes Ultimate Damage +35% total possible. Relic bonuses of the same type add together and multiply with other bonus families.
+Vault: Power Vault contains four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+Perks: Unlock a Random Ultimate Weapon grants one currently unowned UW in a semi-upgraded form for the run, still takes applicable module substats, does not unlock labs, and leaves the perk pool once all UWs are owned. Weapon-specific UW perks only appear when that UW is unlocked or was granted by the random-UW perk, and they are: 4 More Smart Missiles, Swamp Radius x1.5, +1 Wave on Death Wave, Extra Set of Inner Mines, Golden Tower Bonus x1.5, Chain Lightning Damage x2, Chrono Field Duration +5s, Black Hole Duration +12.0s, and Spotlight Damage Bonus x1.5. Golden Tower Bonus x1.5 does not apply to the Golden Tower bonus submodule effect.
+Footguns: Core module support does not mirror every base stat on every weapon. Use the current Core substat table when a Core stat list differs from the stone-upgrade stat list.
+
+Mechanic: Chain Lightning
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Chain Damage
+Aliases: cl
+Disambiguation: This entry is about Chain Lightning as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Smite UW+ row in isolation.
+Definition: Chain Lightning gives tower hits a chance to spawn chain lightning strikes that deal a percentage of tower damage. The shown damage accounts for crit-based tower scaling.
+Basic Upgrades:
+Basic upgrades for Chain Lightning are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Chain Lightning allows the player to upgrade Damage, Quantity, and Chance using stones.
+Upgradeable stats:
+• Damage
+• Quantity
+• Chance
+Costs:
+Damage has 31 levels.
+Quantity has 4 levels.
+Chance has 15 levels.
+Total stones to max: 18,375.
+Ultimate Weapon Plus:
+Smite gives every Chain Lightning hit a chance equal to Chain Lightning Chance to do extra damage equal to a multiple of current wave HP. Smite activates up to 100 times per enemy.
+Ultimate Weapon Plus abilities can only be unlocked once all 9 Ultimate Weapons are purchased.
+Formula: Uses the global Ultimate Weapon damage formula with Chain Lightning Damage as the UW multiplier.
+Behavior:
+Base stats: Damage x2 to x7,961, Quantity 1 to 5, Chance 5.0% to 27.5%.
+Labs: Chain Lightning Shock unlocks at Tier 7 Wave 60, then unlocks Shock Chance and Shock Multiplier. Later labs add enemy damage reduction scaling from Chain Lightning damage and extra consecutive-hit damage against scatters.
+Chain Lightning Shock: Chance to apply shock to enemies hit by Chain Lightning, causing enemies to receive more damage. Has 1 level. Chance starts at 2.50% and the multiplier starts at x1.10.
+Shock Chance: Chance Chain Lightning applies shock to enemies. Has 30 levels.
+Shock Multiplier: Extra damage enemies affected by shock receive. Has 14 levels.
+Enemy Damage Reduction Lab: Enemy damage is reduced by 10% for every 6% of health an enemy lost from Chain Lightning damage, up to a max percent. Has 30 levels increasing max reduction by 3% per level for a max reduction of 90%.
+Scatter Consecutive-Hit Lab: Increases Chain Lightning damage done to scatters by each consecutive hit as an additive bonus, so all values are effectively 1+ higher than shown compared with the original 1x first hit.
+Cards: Ultimate Crit applies because Chain Lightning damage scales from tower damage rather than % enemy health.
+Masteries: None.
+Modules:
+Core module substats: Damage Common +8x, Rare +15x, Epic +25x, Legendary +50x, Mythic +100x, Ancestral +250x. Quantity Epic +1, Legendary +2, Mythic +3, Ancestral +4. Chance Common +2%, Rare +4%, Epic +6%, Legendary +9%, Mythic +12%, Ancestral +15%.
+Unique modules: Dimension Core. Epic: Chain Lightning shock can stack up to 5, and Chain Lightning has a 60% chance to hit the initial target. Legendary: stack cap 10. Mythic: stack cap 15. Ancestral: stack cap 20. Shock chance and multiplier are doubled.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Chain Lightning for the run; module substats still apply, but Chain Lightning labs stay locked. Chain Lightning Damage x2 doubles Chain Lightning damage. The weapon-specific perk only appears when Chain Lightning is already unlocked or was granted by the random-UW perk that run.
+Interactions: Because Chain Lightning uses the shared UW damage formula, Cannon Critical Chance, Critical Factor, and Super Crit module substats, plus other module effects that multiply tower damage, also raise its real damage output. Global Ultimate Damage relics provide up to +35% total UW damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+Footguns: Dimension Core modifies Shock stacking behavior, not the base stone-upgrade stat ranges.
+
+Mechanic: Smart Missiles
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Tracking Damage
+Aliases: sm
+Disambiguation: This entry is about Smart Missiles as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Cover Fire UW+ row in isolation.
+Definition: Smart Missiles launches tracking missiles that explode on impact and deal a multiplier of tower damage.
+Basic Upgrades:
+Basic upgrades for Smart Missiles are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Smart Missiles allows the player to upgrade Damage, Quantity, and Cooldown using stones.
+Upgradeable stats:
+• Damage
+• Quantity
+• Cooldown
+Costs:
+Damage has 30 levels.
+Quantity has 15 levels.
+Cooldown has 16 levels.
+Total stones to max: 24,407.
+Ultimate Weapon Plus:
+Cover Fire launches a Smart Missile every X seconds.
+Ultimate Weapon Plus abilities can only be unlocked once all 9 Ultimate Weapons are purchased.
+Formula: Uses the global Ultimate Weapon damage formula with Smart Missiles Damage as the UW multiplier.
+Behavior:
+Base stats: Damage x10 to x3,021, Quantity 5 to 20, Cooldown 180s to 20s.
+Labs: Missile Despawn Time, Missile Amplifier, Missile Explosions, and Missile Radius are unlocked at Tier 7 Wave 30. Missile Barrage and Missile Barrage Quantity are unlocked at Tier 8 Wave 50. Recharge Missile Barrage is unlocked at Tier 14 Wave 60.
+Missile Despawn Time: Increases time until missiles disappear without hitting an enemy. Has 20 levels.
+Missile Amplifier: Each missile hit on a target amplifies the damage for the next missile on the same target as an additive bonus. Has 25 levels.
+Missile Explosions: Missiles deal area-of-effect damage, damaging surrounding enemies. Has 1 level and unlocks Missile Radius after completion. Starting radius is 0.30.
+Missile Radius: Unlocked after Missile Explosions. Increases the radius of missile explosions. Has 20 levels.
+Missile Barrage: Unlocks a manually activated once-per-run barrage of missiles with a base amount of 20 missiles. Has 1 level and unlocks Missile Barrage Quantity after completion.
+Missile Barrage Quantity: Increases missiles launched during Missile Barrage. Has 6 levels.
+Recharge Missile Barrage: Allows Missile Barrage to recharge after a number of waves. Has 7 levels.
+Cards: Ultimate Crit applies because Smart Missiles damage scales from tower damage.
+Masteries: None.
+Modules:
+Core module substats: Damage Common +8x, Rare +15x, Epic +25x, Legendary +50x, Mythic +100x, Ancestral +250x. Quantity Epic +1, Legendary +2, Mythic +4, Ancestral +5. Cooldown Legendary -2s, Mythic -4s, Ancestral -6s.
+Unique modules: No Smart Missiles-specific Core unique module exists in the current set. Galaxy Compressor still reduces Smart Missiles cooldown by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Smart Missiles for the run; module substats still apply, but Smart Missiles labs stay locked. 4 More Smart Missiles adds four missiles to each activation. The weapon-specific perk only appears when Smart Missiles is already unlocked or was granted by the random-UW perk that run.
+Interactions: Because Smart Missiles uses the shared UW damage formula, Cannon Critical Chance, Critical Factor, and Super Crit module substats, plus other module effects that multiply tower damage, also raise its real damage output. Global Ultimate Damage relics provide up to +35% total UW damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage. Spotlight Missiles uses Smart Missiles damage when Smart Missiles is unlocked; when Smart Missiles is not unlocked, Spotlight Missiles uses the base damage of 14x instead.
+
+Mechanic: Death Wave
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Persistent Wave Damage
+Aliases: dw
+Disambiguation: This entry is about Death Wave as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Kill Wall UW+ row in isolation.
+Definition: Death Wave fires Effect Waves and then a persistent Death Wave driven by a damage pool. Effect Waves provide coin, health, cell, damage-amplification, and armor-stripping support before or alongside the damaging wave.
+Basic Upgrades:
+Basic upgrades for Death Wave are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Death Wave allows the player to upgrade Damage, Effect Wave Quantity, and Cooldown using stones.
+Upgradeable stats:
+• Damage
+• Effect Wave Quantity
+• Cooldown
+Costs:
+Damage has 30 levels.
+Effect Wave Quantity has 4 levels.
+Cooldown has 25 levels.
+Total stones to max: 29,391.
+Ultimate Weapon Plus:
+Kill Wall causes each Effect Wave hit to amplify the Death Wave damage store additively.
+Ultimate Weapon Plus abilities can only be unlocked once all 9 Ultimate Weapons are purchased.
+Formula: Uses the global Ultimate Weapon damage formula with Death Wave Damage as the UW multiplier, but the wave persists until its stored damage pool is spent.
+Behavior:
+Core mechanics:
+• The Death Wave is a single powerful wave that deals damage based on a damage pool.
+• The damage pool accumulates damage through multiple activations rather than resetting with each new use.
+• The damage pool only decreases by the exact amount required to destroy enemies, factoring in bonuses.
+• The Death Wave remains active within tower range until the damage pool is depleted.
+Effect Waves:
+• Before the Death Wave strikes, it is preceded by a series of Effect Waves.
+• Effect Wave Quantity is the stat formerly represented by Quantity and effectively functions like a duration because the animation is cosmetic while effects trigger immediately as waves are fired.
+• Effect Waves have infinite range and occur at 4-second intervals.
+Effect Wave utilities:
+• Coin Bonus: Enemies hit by an Effect Wave or the Death Wave drop additional coins upon destruction.
+• Health Bonus: Each enemy hit increases max health by 0.05% when destroyed.
+• Cell Bonus: Elite enemies struck yield additional cells.
+• Damage Amplification: Each Effect Wave hit increases the damage dealt by the Death Wave to that enemy. Starts at 5x at base.
+• Armor Stripping: Effect Waves strip armor from enemies, reducing their defenses against the Death Wave.
+Base stats: Damage x2 to x9,119, Effect Wave Quantity 1 to 5, Cooldown 300s to 50s.
+Labs: Death Wave labs unlock at Tier 3 Wave 250 and cover Health, Coins Bonus, Cell Bonus, Damage Amplifier, and Armor Stripping.
+Death Wave Health: Maximum health bonus from killing enemies marked or killed by Death Wave is increased, up to 12.5x base. Bonus health is tracked during a round by clicking on health in the workshop once at least one level is researched.
+Death Wave Coins Bonus: Extra coin bonus applied to enemies hit by Effect Waves or killed by Death Wave. Has 20 levels.
+Death Wave Cell Bonus: Extra cell bonus applied to enemies hit by Effect Waves or killed by Death Wave, up to 3x cell bonus. Has 20 levels.
+Death Wave Damage Amplifier: Each Effect Wave hit on a given enemy boosts the damage that enemy takes from the Death Wave, up to +50x per Effect Wave. Has 30 levels.
+Death Wave Armor Stripping: Each Effect Wave hit strips some amount of armor from an enemy, up to a max reduction of 10. Has 10 levels.
+Cards: Ultimate Crit applies to the damage-dealing Death Wave because it scales from tower damage rather than % enemy health.
+Masteries: None.
+Modules:
+Core module substats: Damage Common +8x, Rare +15x, Epic +25x, Legendary +50x, Mythic +100x, Ancestral +250x. Cooldown Legendary -6s, Mythic -10s, Ancestral -13s.
+Unique modules: None dedicated to Death Wave in the Core family.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Death Wave for the run; module substats still apply, but Death Wave labs stay locked. The random-perk version keeps the base health bonus, coin bonus, and damage amplification, but not the Cell Bonus or Armor Stripping features. +1 Wave on Death Wave adds one more Effect Wave. The weapon-specific perk only appears when Death Wave is already unlocked or was granted by the random-UW perk that run.
+Footguns: Current Core substat data modifies Damage and Cooldown only; Effect Wave Quantity is not currently exposed as a Core substat.
+Interactions: Multiverse Nexus synchronizes Death Wave with Golden Tower and Black Hole and sets their shared cooldown to the average of the three with a rarity-based modifier. Galaxy Compressor also reduces Death Wave cooldown by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral. Because Death Wave uses the shared UW damage formula, Cannon Critical Chance, Critical Factor, and Super Crit module substats, plus other module effects that multiply tower damage, also raise its real damage output. Global Ultimate Damage relics provide up to +35% total UW damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+
+Mechanic: Chrono Field
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Enemy Slow Field
+Aliases: cf
+Disambiguation: This entry is about Chrono Field as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Chrono Loop UW+ row in isolation.
+Definition: Chrono Field creates a timed field that slows enemies inside it. It is the only UW that can sustain permanent uptime because duration can exceed cooldown.
+Basic Upgrades:
+Basic upgrades for Chrono Field are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Chrono Field allows the player to upgrade Duration, Slow, and Cooldown using stones.
+Upgradeable stats:
+• Duration
+• Slow
+• Cooldown
+Costs:
+Duration has 35 levels.
+Slow has 11 levels.
+Cooldown has 12 levels.
+Total stones to max: 9,946.
+Ultimate Weapon Plus:
+Chrono Loop causes enemies affected by Chrono Field to spiral around the tower based on a rotation rate.
+Ultimate Weapon Plus abilities can only be unlocked once all 9 Ultimate Weapons are purchased.
+Formula: None.
+Behavior:
+Base stats: Duration 5s to 40s, Speed Reduction 20% to 75%, Cooldown 180s to 60s.
+Chrono Field Speed Reduction is capped at 90% with substats.
+Chrono Field can sustain permanent uptime because duration can exceed cooldown by up to 10 seconds at the lowest cooldown.
+Chrono Field does not stack on itself. Any remaining duration from the previous activation is wasted when the next activation starts.
+Chrono Loop mechanics: Chrono Loop exerts a tangential force on enemies within Chrono Field range, causing them to spiral around the tower as they approach. The in-game rotation-rate value is the theta value, or radians traveled per 2 seconds.
+Labs: Chrono Field Duration, Damage Reduction, Reduction %, and Range unlock at Tier 7 Wave 90.
+Chrono Field Duration: Increases the duration of Chrono Field. Has 30 levels.
+Chrono Field Damage Reduction: Reduces damage taken by the tower while Chrono Field is active. Starts at 10%, has 1 level, unlocks Chrono Field Reduction % after completion, and applies after Defense Absolute is calculated.
+Chrono Field Reduction %: Increases the reduction of damage taken while Chrono Field is active. Has 30 levels.
+Chrono Field Range: Extends the range of Chrono Field beyond tower range. Has 20 levels.
+Cards: None.
+Masteries: None.
+Modules:
+Core module substats: Duration current site data lists Legendary 43s, Mythic +7s, Ancestral +10s. Speed Reduction Epic +3%, Legendary +8%, Mythic +11%, Ancestral +15%. Cooldown Legendary -4s, Mythic -7s, Ancestral -10s.
+Unique modules: None dedicated to Chrono Field in the Core family.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Chrono Field for the run; module substats still apply, but Chrono Field labs stay locked. Chrono Field Duration +5s adds 5 seconds to Chrono Field duration. The weapon-specific perk only appears when Chrono Field is already unlocked or was granted by the random-UW perk that run.
+Footguns: Chrono Field cannot stack on itself. Any remaining duration from the previous activation is wasted when the next activation starts.
+Interactions: Galaxy Compressor reduces Chrono Field cooldown by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral.
+
+Mechanic: Inner Land Mines
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Rotating Mine Damage
+Aliases: ilm
+Disambiguation: This entry is about Inner Land Mines as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Charged Mine UW+ row in isolation.
+Definition: Inner Land Mines spawns rotating mines around the tower that explode on contact for area damage based on tower damage.
+Basic Upgrades:
+Basic upgrades for Inner Land Mines are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Inner Land Mines allows the player to upgrade Damage, Quantity, and Cooldown using stones.
+Upgradeable stats:
+• Damage
+• Quantity
+• Cooldown
+Costs:
+Damage has 30 levels.
+Quantity has 3 levels.
+Cooldown has 15 levels.
+Total stones to max: 13,522.
+Ultimate Weapon Plus:
+Charged Mine increases the damage of Inner Land Mines each second for as long as each mine remains alive. The charge does not reset until that mine detonates.
+Ultimate Weapon Plus abilities can only be unlocked once all 9 Ultimate Weapons are purchased.
+Formula: Uses the global Ultimate Weapon damage formula with Inner Land Mines Damage as the UW multiplier.
+Behavior:
+Base stats: Damage x10 to x3,021, Quantity 3 to 6, Cooldown 200s to 50s.
+Inner Land Mines cooldown is hard capped at 37 seconds.
+Charged Mine behavior:
+• Damage increases each second for as long as an Inner Land Mine remains alive.
+• The charge multiplier is applied to each mine individually.
+• When one mine detonates, the other active mines keep their current charge multiplier.
+• Charge on active mines does not reset when cooldown resets.
+Labs: Inner Mine Blast Radius, Inner Mine Rotation Speed, and Inner Mine Stun unlock at Tier 7 Wave 40.
+Inner Mine Blast Radius: Increases the area Inner Land Mines will damage when triggered. Has 20 levels.
+Inner Mine Rotation Speed: Increases the speed that mines rotate around the tower. Has 20 levels.
+Inner Mine Stun: When Inner Land Mines explode, they stun nearby enemies for 2.5 seconds. Has 1 level.
+Inner Land Mine - Chrono Jump: When an enemy is hit by an Inner Land Mine, the charge of the Inner Land Mine is boosted by this lab times the number of times that enemy has been hit by an Inner Land Mine. Has 10 levels and requires ILM+.
+Cards: Ultimate Crit applies because Inner Land Mines damage scales from tower damage.
+Masteries: None.
+Modules:
+Core module substats: Damage Common +2x, Rare +5x, Epic +15x, Legendary +40x, Mythic +100x, Ancestral +150x. Quantity Legendary +1, Mythic +2, Ancestral +3. Cooldown Epic -5s, Legendary -8s, Mythic -10s, Ancestral -13s.
+Unique modules: Magnetic Hook. Epic: 1 Inner Land Mine fires at bosses entering tower range and 25% of elites get the same treatment. Legendary: 2 mines. Mythic: 3 mines. Ancestral: 4 mines.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Inner Land Mines for the run; module substats still apply, but Inner Land Mines labs stay locked. Extra Set of Inner Mines adds one more full mine set to each activation. The weapon-specific perk only appears when Inner Land Mines is already unlocked or was granted by the random-UW perk that run.
+Footguns: Base ILM cooldown is hard-capped at 37s. Charged Mines keeps charge on undetonated mines even when cooldown resets.
+Interactions: Space Displacer, an Armor unique module rather than a Core unique module, can convert spawned landmines into autonomous Inner Land Mines with Epic 15%, Legendary 20%, Mythic 25%, and Ancestral 30% chance. Galaxy Compressor also reduces Inner Land Mines cooldown by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral. Because Inner Land Mines uses the shared UW damage formula, Cannon Critical Chance, Critical Factor, and Super Crit module substats, plus other module effects that multiply tower damage, also raise its real damage output. Global Ultimate Damage relics provide up to +35% total UW damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+
+Mechanic: Golden Tower
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Cash & Coin Multiplier
+Aliases: gt
+Disambiguation: This entry is about Golden Tower as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Golden Combo UW+ row in isolation.
+Definition: Golden Tower turns the tower golden for a period of time after a cooldown. While active, it provides a multiplier to cash and coins earned from enemy kills. Golden Tower does not deal damage; it modifies income.
+Basic Upgrades:
+Basic upgrades for Golden Tower are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Golden Tower allows the player to upgrade Multiplier, Duration, and Cooldown using stones.
+Upgradeable stats:
+• Multiplier
+• Duration
+• Cooldown
+Costs:
+Multiplier has 20 levels, Duration has 38 levels, and Cooldown has 20 levels.
+Total stone cost is 27,186.
+Ultimate Weapon Plus:
+Golden Combo increases cash and coins earned after Golden Tower finishes by x% for each kill.
+Ultimate Weapon Plus abilities can only be unlocked when all 9 Ultimate Weapons are unlocked.
+Formula:
+Bonus multiplier = ((1 + 0.0003 x (Level + 1))^Kill) - 1
+Golden Combo only counts kills from enemies that spawned during the current Golden Tower activation. Enemies alive before activation do not count.
+Behavior:
+Final bonus depends heavily on Golden Tower duration.
+K = kills during GT = kills per second * duration = Kps * d
+B = bonus multiplier = ((1 + 0.0003 x (Level + 1))^K) - 1
+I = income during GT = K * income per mob
+T = number of GT activations = total duration / GT CD
+Final income: T * I * (1 + B)
+100% GT Uptime:
+If GT is already at 100% uptime (such as when using MVN or GC), the calculation changes a bit.
+
+T = Number of GT activations = Total duration / d
+
+FI = Final income =T * (I + I * B) => T * I * (1 + B) => Total duration * Kps * income per mob * ((1 + 0.0003 x (Level + 1))^(Kps * d))
+Labs:
+Unlocks labs in Milestones at Tier 4 Wave 200, unlocking Golden Tower Bonus and Golden Tower Duration. Each lab increases the base level of its respective workshop stat.
+
+Golden Tower Bonus
+Has 25 levels, with each level increasing the Golden Tower bonus by 0.15, for a total additional bonus of 3.75.
+
+Golden Tower Duration
+Has 20 levels, each increasing the duration of Golden Tower, for a total duration increase of 20s.
+
+Mechanic: Poison Swamp
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Damage Over Time
+Aliases: ps
+Disambiguation: This entry is about Poison Swamp as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Death Creep UW+ row in isolation.
+Definition: Poison Swamp creates a damaging swamp that deals damage every second for a duration. Enemies damaged by Poison Swamp gain the Poisoned tag until death and move 25% slower while inside a Poison Swamp.
+Basic Upgrades:
+Basic upgrades for Poison Swamp are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Poison Swamp allows the player to upgrade Damage, Duration, and Cooldown using stones.
+Upgradeable stats:
+• Damage
+• Duration
+• Cooldown
+Costs:
+Damage has 30 levels.
+Duration has 14 levels.
+Cooldown has 15 levels.
+Total stone cost is 19,196.
+Ultimate Weapon Plus:
+Death Creep increases damage dealt by Poison Swamp for each tick by x% of Poison Swamp damage.
+Ultimate Weapon Plus abilities can only be unlocked when all 9 Ultimate Weapons are purchased.
+Formula: Uses the global Ultimate Weapon damage formula for the swamp's tower-damage-based ticks.
+Behavior:
+Base stats: Damage x10 to x3,021, Duration 30s to 100s, Cooldown 125s to 50s.
+Enemies can be stunned once per entry into a Poison Swamp and may be stunned again upon re-entry or by entering another Poison Swamp.
+Enemies receive damage from one Poison Swamp when entering overlapping Poison Swamps.
+Although undocumented in release notes, Poison Swamp appears to keep the previous PS+0 ramping behavior, increasing by 50% base damage every second before Death Creep scaling is layered on later ticks.
+Labs: Swamp Radius and Poison Swamp Stun unlock at Tier 7 Wave 50. Later labs add Swamp Stun Chance, Swamp Stun Time, Swamp Rend, and Swamp Rend - Additional Enemies.
+Cards: Ultimate Crit applies to the tower-damage-based Poison Swamp ticks, but not to any % based damage interaction.
+Masteries: None.
+Modules:
+Core module substats: Damage Common +0.5x, Rare +0.8x, Epic +1.5x, Legendary +4x, Mythic +10x, Ancestral +20x. Duration Legendary +5s, Mythic +10s, Ancestral +13s. Chance Rare +3%, Epic +4%, Legendary +8%, Mythic +11%, Ancestral +15%.
+Unique modules: Harmony Conductor. Epic: poisoned enemies have a 15% chance to miss attacks, bosses use half chance. Legendary: 20%. Mythic: 25%. Ancestral: 30%.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Poison Swamp for the run; module substats still apply, but Poison Swamp labs stay locked. Swamp Radius x1.5 multiplies Poison Swamp radius by 1.5x. The weapon-specific perk only appears when Poison Swamp is already unlocked or was granted by the random-UW perk that run.
+Interactions: Because Poison Swamp uses the shared UW damage formula for its tower-damage-based ticks, Cannon Critical Chance, Critical Factor, and Super Crit module substats, plus other module effects that multiply tower damage, also raise its real damage output. Global Ultimate Damage relics provide up to +35% total UW damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+Footguns: The current Core substat table exposes Poison Swamp Chance instead of Cooldown for the third stat, so Core support does not line up one-to-one with the base stone-upgrade row.
+
+Mechanic: Black Hole
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Enemy Control
+Aliases: bh
+Disambiguation: This entry is about Black Hole as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Consume UW+ row in isolation.
+Definition: Black Hole creates a field that pulls enemies inward for a duration within a specified size. Labs can add damage, coins, extra holes, and ranged-enemy denial.
+Basic Upgrades:
+Basic upgrades for Black Hole are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Black Hole allows the player to upgrade Size, Duration, and Cooldown using stones.
+Upgradeable stats:
+• Size
+• Duration
+• Cooldown
+Costs:
+Size has 20 levels.
+Duration has 23 levels.
+Cooldown has 15 levels.
+Total stone cost is 9,723.
+Ultimate Weapon Plus:
+Consume causes each Black Hole to deal a multiple of current wave HP to every enemy affected at the end of its activation.
+Ultimate Weapon Plus abilities can only be unlocked when all 9 Ultimate Weapons are purchased.
+Formula: None for the base pull effect. Black Hole Damage lab uses % enemy health per second and is not the global tower-damage UW formula.
+Behavior:
+Base stats: Size 30m to 70m, Duration 15s to 38s, Cooldown 200s to 50s.
+Undocumented, unlocking Consume also increases the speed of the pull from Black Hole toward the center.
+Labs: Black Hole Damage and Black Hole Coin Bonus unlock at Tier 5 Wave 150. Extra Black Hole unlocks at Tier 5 Wave 500. Black Hole Disable Ranged Enemies unlocks at Tier 14 Wave 20.
+Black Hole Damage: Black Hole deals a percent of enemy total health per second. Protectors do not reduce damage from Black Hole. Has 10 levels.
+Black Hole Coin Bonus: Extra coins are earned by enemies killed within Black Hole. Enemies do not need to be killed by Black Hole to receive this bonus, nor do they need to be affected by its pull.
+Extra Black Hole: A second Black Hole spawns when Black Hole is active. The second Black Hole always spawns on the opposite side of the tower and has the same stats and abilities as the original Black Hole.
+Black Hole Disable Ranged Enemies: Ranged enemies inside Black Holes cannot fire even when in range. Unlocks at Tier 14 Wave 20.
+Cards: Ultimate Crit does not apply to Black Hole's % based damage lab ticks.
+Masteries: None.
+Modules:
+Core module substats: Size Common +2m, Rare +4m, Epic +6m, Legendary +8m, Mythic +10m, Ancestral +12m. Duration Legendary +2s, Mythic +3s, Ancestral +4s. Cooldown Legendary -2s, Mythic -3s, Ancestral -4s.
+Unique modules: Primordial Collapse. Epic: spawns one extra Black Hole and reduces damage from enemies within a Black Hole by 50%. Legendary: 55%. Mythic: 65%. Ancestral: 80%.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Black Hole for the run; module substats still apply, but Black Hole labs stay locked. Black Hole Duration +12.0s adds 12 seconds to Black Hole duration. The weapon-specific perk only appears when Black Hole is already unlocked or was granted by the random-UW perk that run.
+Interactions: Black Hole distance from the tower depends on Tower Range, and the center of the hole moves farther from the tower as range increases. Multiverse Nexus synchronizes Black Hole with Death Wave and Golden Tower using the averaged shared cooldown. Galaxy Compressor also reduces Black Hole cooldown by 10s, 13s, 17s, and 20s on package pickup at Epic, Legendary, Mythic, and Ancestral. Global Ultimate Damage relics provide up to +35% total UW damage for UWs that deal damage. Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+Footguns: None.
+
+Mechanic: Spotlight
+Type: Ultimate Weapon
+Domain: Workshop
+Section: Ultimate Weapons
+Category: Damage Amplifier
+Aliases: sl
+Disambiguation: This entry is about Spotlight as an individual Ultimate Weapon, not the Ultimate Weapons system as a whole, another weapon, or the Light Range UW+ row in isolation.
+Definition: Spotlight creates rotating light cones that increase damage taken by enemies inside the beam. It multiplies non-%-health damage sources rather than acting as its own damage hit.
+Basic Upgrades:
+Basic upgrades for Spotlight are located in the Ultimate Weapon menu after unlocking the Ultimate Weapon. Unlocking Spotlight allows the player to upgrade Bonus, Angle, and Quantity using stones.
+Upgradeable stats:
+• Bonus
+• Angle
+• Quantity
+Costs:
+Bonus has 25 levels.
+Angle has 60 levels.
+Quantity has 3 levels.
+Total stone cost is 42,236.
+Ultimate Weapon Plus:
+Light Range boosts Spotlight damage bonus.
+Ultimate Weapon Plus abilities can only be unlocked when all 9 Ultimate Weapons have been purchased.
+Formula: None. Spotlight is a damage-taken multiplier, not a standalone direct-damage formula.
+Behavior:
+Base stats: Bonus x8.0 to x43.0, Angle 30 to 90, Quantity 1 to 4.
+Spotlight multiplies all damage sources that are not based on % enemy health and are not based on wave stats.
+Labs: Spotlight Missiles unlocks at Tier 3 Wave 400. Spotlight Coin Bonus unlocks at Tier 7 Wave 80.
+Spotlight Missiles: The tower fires missiles from the tower after a period of time. Spotlight Missiles will not fire until the first level is unlocked and frequency becomes 19 seconds. Has 18 levels.
+Spotlight Coin Bonus: Provides a coin multiplier to enemies killed in Spotlight. They do not need to be killed by Spotlight.
+Cards: None.
+Masteries: None.
+Modules:
+Core module substats: Bonus Common +1.2x, Rare +2.5x, Epic +3.5x, Legendary +10x, Mythic +15x, Ancestral +20x. Angle Epic +3 degrees, Legendary +6 degrees, Mythic +11 degrees, Ancestral +15 degrees.
+Unique modules: Om Chip. Epic: Spotlight rotates to focus bosses and reflected light increases nearby-enemy damage taken by x2. Legendary: x4. Mythic: x7. Ancestral: x15.
+Perks: Unlock a Random Ultimate Weapon can grant a semi-upgraded Spotlight for the run; module substats still apply, but Spotlight labs stay locked. Spotlight Damage Bonus x1.5 multiplies Spotlight's damage-taken bonus by 1.5x. The weapon-specific perk only appears when Spotlight is already unlocked or was granted by the random-UW perk that run.
+Interactions: Light Range boosts Spotlight damage bonus by a percent of Damage / Meter, and Tower Range affects that behavior. Spotlight Missiles uses Smart Missiles damage; when Smart Missiles is not unlocked, Spotlight Missiles uses the base damage of 14x instead. Global Ultimate Damage relics provide up to +35% total UW damage for UWs that deal damage, and Power Vault provides four separate 5% Ultimate Weapon Damage nodes for +20% total global UW damage.
+Footguns: Current Core substat data modifies Bonus and Angle only; Quantity is not currently exposed as a Core substat.

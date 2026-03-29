@@ -1,0 +1,215 @@
+# Events Structured Reference
+
+This file reorganizes event knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/events for side-by-side comparison.
+
+Mechanic: Events
+Type: System
+Domain: Limited-Time Progression
+Section: Events
+Category: Progression
+Aliases: none.
+Definition: Events are repeating challenge cycles that reward medals for completing mission tiers.
+Behavior:
+Events unlock in Milestones at Tier 1 Wave 70.
+Events run on a repeating two-week cadence.
+Event progress centers on missions, medal rewards, relic thresholds, and the event shop.
+
+Mechanic: Event Cycle
+Type: Schedule Rule
+Domain: Events
+Section: Events
+Category: Schedule
+Aliases: event rotation; event cadence
+Definition: Event Cycle is the repeating two-week schedule that controls mission rollout and event downtime.
+Behavior:
+Each event lasts 2 weeks.
+The first 8 days add new missions.
+The final 6 days add no new missions.
+When one event ends, the next event starts immediately.
+
+Mechanic: Event Missions
+Type: Objective System
+Domain: Events
+Section: Events
+Category: Missions
+Aliases: missions; event quests
+Definition: Event Missions are the challenge list that awards medals during an event.
+Behavior:
+All event missions have 3 tiers.
+Higher tiers ask for larger requirements and give larger medal payouts.
+Missions remain available until the current event ends.
+Mission categories can draw from always-available tasks, base combat goals, workshop actions, cards, labs, and ultimate weapons.
+
+Mechanic: Event Mission Tiers
+Type: Reward Table
+Domain: Events
+Section: Events
+Category: Missions
+Aliases: mission tier rewards
+Definition: Event Mission Tiers are the three medal-paying completion levels attached to each event mission.
+Behavior:
+Tier 1 rewards 10 medals.
+Tier 2 rewards 15 medals.
+Tier 3 rewards 20 medals.
+Each higher tier requires more progress than the previous tier.
+
+Mechanic: Event Mission Rollout
+Type: Availability Rule
+Domain: Events
+Section: Events
+Category: Missions
+Aliases: mission unlock schedule
+Definition: Event Mission Rollout controls how many new missions appear during the first part of an event.
+Behavior:
+7 missions are available on the first day.
+2 more missions are added each day for the next 7 days.
+No new missions appear during the final 6 days of the event.
+
+Mechanic: Event Rewards
+Type: Reward System
+Domain: Events
+Section: Events
+Category: Rewards
+Aliases: medal rewards
+Definition: Event Rewards are the medals and relic-threshold progress earned by completing event missions.
+Behavior:
+Completing mission tiers awards medals.
+Collected medals also count toward event relic thresholds when those medals were earned during the current event.
+Medals do not need to be spent to claim earned relic thresholds.
+
+Mechanic: Event Booster
+Type: Premium Modifier
+Domain: Events
+Section: Events
+Category: Rewards
+Aliases: booster; event pass booster
+Definition: Event Booster doubles medal rewards for the event in which it is purchased.
+Behavior:
+The event booster doubles medal amounts for that event only.
+Booster-doubled medals also count toward relic thresholds.
+A booster must be purchased separately for each event where doubled medals are wanted.
+
+Mechanic: Event Relic Progress
+Type: Threshold System
+Domain: Events
+Section: Events
+Category: Rewards
+Aliases: relic thresholds; event relic milestones
+Definition: Event Relic Progress is the medal-earned threshold track that unlocks event relic rewards.
+Behavior:
+350 medals unlock the first rare relic.
+550 medals unlock the first premium rare relic.
+700 medals unlock the second epic relic.
+1100 medals unlock the second premium epic relic.
+Medals carried over from previous events or earned from daily mission boxes do not count toward this progress.
+
+Mechanic: Event Shop
+Type: Store
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: event store
+Definition: Event Shop is the medal-spending store that remains available even when no event is active.
+Behavior:
+The event shop spends medals.
+The shop remains open even while no event is running.
+The shop offers currencies, themes, relics, songs, and bots.
+
+Mechanic: Event Shop Currency Purchases
+Type: Cost Ladder
+Domain: Medals
+Section: Events
+Category: Purchases
+Aliases: event exchange; event currency costs
+Definition: Event Shop Currency Purchases are the medal exchange options and scaling price ladder for currencies in the event shop.
+Behavior:
+Each exchange gives either 150 gems, 15 stones, or 250 shards.
+There are four shard types tied to the four module families.
+Buying shards increases the cost of the other shard types as well.
+Costs:
+Purchase 1 costs 40 medals.
+Purchase 2 costs 65 medals.
+Purchase 3 costs 90 medals.
+Purchase 4 costs 130 medals.
+Purchase 5 costs 175 medals.
+Purchase 6 costs 230 medals.
+Purchase 7 costs 380 medals.
+
+Mechanic: Event Themes
+Type: Cosmetic Rotation
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: event themes
+Definition: Event Themes are rotating event-shop cosmetics that remain permanently unlocked once purchased.
+Behavior:
+Themes rotate each event and can be missed.
+One tower theme costs 150 medals.
+One background theme costs 250 medals.
+Purchased event themes remain available forever.
+
+Mechanic: Event Relics
+Type: Limited Purchase
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: event store relics
+Definition: Event Relics are limited medal purchases sold in the event shop and distinct from the relics earned through medal thresholds.
+Behavior:
+Event-shop relics are sold at 200-medal and 500-medal price points.
+These relics can be limited to the sponsoring event.
+Earned event relics and purchased event relics are separate acquisition paths.
+
+Mechanic: Event Songs
+Type: Permanent Purchase
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: songs
+Definition: Event Songs are fixed event-shop purchases that each grant a permanent coin bonus.
+Behavior:
+There are 3 songs available.
+Songs do not rotate.
+Each song costs 200 medals.
+Each song grants a +0.6% coin bonus.
+
+Mechanic: Event Store Bots
+Type: Store Category
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: bot shop; event bots
+Definition: Event Store Bots are the bot unlocks sold through the event shop for medals.
+Behavior:
+Bots are purchased only with medals in the event shop.
+The shop offers Flame, Thunder, Golden, and Amplify bots.
+Purchased bots do not reset between events.
+Bots can be toggled on or off in the shop between rounds.
+
+Mechanic: Event Bot Unlock Costs
+Type: Cost Ladder
+Domain: Medals
+Section: Events
+Category: Purchases
+Aliases: bot unlock ladder
+Definition: Event Bot Unlock Costs are the escalating medal costs for unlocking additional bots from the event shop.
+Behavior:
+The first bot costs 150 medals.
+The second bot costs 300 medals.
+The third bot costs 600 medals.
+The fourth bot costs 900 medals.
+Each additional unlocked bot raises the cost of the next bot unlock.
+
+Mechanic: Bot Respec
+Type: Reset Rule
+Domain: Event Store
+Section: Events
+Category: Purchases
+Aliases: event bot respec
+Definition: Bot Respec refunds medal-based bot unlocks and medal-based bot upgrades for a gem fee once per event.
+Behavior:
+Bot respec costs 300 gems.
+Bot respec is available once per event.
+Bot labs are not refunded by bot respec.
+Only medal-related bot unlocks and medal-related bot upgrades are refunded.

@@ -1,0 +1,170 @@
+# Bots Structured Reference
+
+This file reorganizes bot knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/bots for side-by-side comparison.
+
+Mechanic: Bots
+Type: System
+Domain: Event Shop
+Section: Bots
+Category: Medal Progression
+Aliases: none.
+Disambiguation: This chunk is about the Bots mechanic itself, not its interactions. It is not about individual bot stat tables, shorthand aliases alone, or tracker implementation details.
+Definition: Bots are medal-based upgrades purchased in the Event Shop. Once unlocked, bot ownership and medal upgrades persist across events rather than resetting each event.
+Behavior:
+Bots can only be purchased with medals in the Event Shop.
+Bots purchased do not reset each event.
+The shop offers 4 bots: Flame Bot, Thunder Bot, Golden Bot, and Amplify Bot.
+Bots can be turned off and on in the shop between rounds.
+Each bot has 4 medal-upgraded stats.
+Unlock Costs:
+Bot unlock costs depend on how many bots have already been purchased.
+1st bot: 150 medals.
+2nd bot: 300 medals.
+3rd bot: 600 medals.
+4th bot: 900 medals.
+Shared Upgrade Costs:
+All bot stat upgrades use the shared medal ladder shown in the raw source overview table.
+Level 1 costs 100 medals and each later level adds 40 medals.
+The shared table in the raw source lists costs through level 20, ending at 860 medals for level 20.
+Aliases:
+Players commonly use shorthand names for bots in questions and guides.
+GB and CB both refer to Golden Bot, which many players also call Coin Bot.
+AB refers to Amplify Bot.
+TB refers to Thunder Bot.
+FB refers to Flame Bot.
+Bot Respec:
+Bots and their spent medals can be refunded through a bot respec.
+Bot respec is available for 300 Gems once per event.
+Labs completed for bots are not refunded through a bot respec; only medal-related unlocks and upgrades are refunded.
+
+Mechanic: Flame Bot
+Type: Bot
+Domain: Event Shop
+Section: Bots
+Category: Area of Effect
+Aliases: fb
+Disambiguation: This chunk is about Flame Bot as an individual bot mechanic itself, not its interactions. It is not about Thunder Bot, Golden Bot, Amplify Bot, or shorthand bot aliases as a standalone topic.
+Definition: Flame Bot damages enemies in an area around the bot and applies a burn effect.
+Unlocking/Upgrading:
+Like all bots, Flame Bot is unlocked and upgraded in the Event Shop menu.
+The unlock cost depends on how many other bots have been bought.
+The raw source says each of Flame Bot's upgrade rows starts from the shared 100-medal base ladder and increases by 40 medals each level.
+Upgrade Stats:
+Damage Reduction
+Cooldown
+Damage
+Range
+Behavior:
+Flame Bot deals burn damage and does 1 tick of damage equal to bot damage per second.
+Damage Reduction starts at 20%.
+Cooldown starts at 75 seconds.
+Damage starts at x50 tower damage.
+Range starts at 30m.
+Damage Reduction reduces the amount of damage burned enemies deal.
+Cooldown is the time between activations.
+Damage increases the damage dealt when Flame Bot activates.
+Range increases the area the bot covers while active.
+Labs:
+Flame Bot Cooldown unlocks in Milestones at Tier 5 Wave 60 and reduces bot cooldown by 1 second per level. Has 25 levels for 25 seconds total reduction.
+Flame Bot - Burn Stack unlocks in Milestones at Tier 10 Wave 50 and allows successive hits on the same enemy to stack burn and increase burn tick frequency. Has 5 levels adding 1 stack each level, with a cap of 10 stacks of burn.
+Interactions:
+Flame Bot damage takes into account crit and super crit factor and chance.
+Flame Bot range is amplified by tower range.
+
+Mechanic: Thunder Bot
+Type: Bot
+Domain: Event Shop
+Section: Bots
+Category: Crowd Control
+Aliases: tb
+Disambiguation: This chunk is about Thunder Bot as an individual bot mechanic itself, not its interactions. It is not about Flame Bot, Golden Bot, Amplify Bot, or shorthand bot aliases as a standalone topic.
+Definition: Thunder Bot stuns enemies in an area around the bot and then applies a lingering slow effect after the stun ends.
+Unlocking/Upgrading:
+Like all bots, Thunder Bot is unlocked and upgraded in the Event Shop menu.
+The unlock cost depends on how many other bots have been bought.
+The raw source says each of Thunder Bot's upgrade rows starts from the shared 100-medal base ladder and increases by 40 medals each level.
+Upgrade Stats:
+Duration
+Cooldown
+Linger
+Range
+Behavior:
+Thunder Bot stuns enemies in an area around the bot.
+Once the stun ends, enemies are slowed by the linger effect.
+Stun and linger are 50% effective against Bosses and Elites.
+Duration starts at 5 seconds.
+Cooldown starts at 120 seconds.
+Linger starts at 20%.
+Range starts at 25m.
+Range increases the area the bot covers while active.
+Labs:
+Thunder Bot Cooldown unlocks in Milestones at Tier 5 Wave 70 and reduces bot cooldown by 1 second per level. Has 25 levels for 25 seconds total reduction.
+Thunder Bot Linger Time unlocks in Milestones at Tier 10 Wave 60 and increases linger duration by 0.5s per level. Has 20 levels for 13 seconds total linger duration.
+Interactions:
+Thunder Bot range is amplified by tower range.
+Thunder Bot stun and linger are only 50% effective against Bosses and Elites.
+
+Mechanic: Golden Bot
+Type: Bot
+Domain: Event Shop
+Section: Bots
+Category: Economy
+Aliases: gb; cb
+Disambiguation: This chunk is about Golden Bot as an individual bot mechanic itself, not its interactions. It is not about Flame Bot, Thunder Bot, Amplify Bot, or shorthand bot aliases as a standalone topic.
+Definition: Golden Bot gives a coin multiplier to enemies destroyed inside the bot's range while it is active.
+Unlocking/Upgrading:
+Like all bots, Golden Bot is unlocked and upgraded in the Event Shop menu.
+The unlock cost depends on how many other bots have been purchased.
+The raw source says each of Golden Bot's upgrade rows starts from the shared 100-medal base ladder and increases by 40 medals each level.
+Upgrade Stats:
+Duration
+Cooldown
+Bonus
+Range
+Behavior:
+Duration starts at 20 seconds.
+Cooldown starts at 120 seconds.
+Bonus starts at x2.0.
+Range starts at 20m.
+Duration increases the time Golden Bot is active.
+Cooldown decreases the time between activations.
+Bonus increases the coin multiplier from enemies destroyed inside the bot's range.
+Range increases the area the bot covers while active.
+Labs:
+Golden Bot Cooldown unlocks in Milestones at Tier 5 Wave 80 and reduces bot cooldown by 1 second per level. Has 25 levels for 25 seconds total reduction.
+Golden Bot Duration unlocks in Milestones at Tier 10 Wave 50 and increases activation length by 0.5 seconds per level. Has 20 levels for 10 seconds total extra duration.
+Interactions:
+Golden Bot range is amplified by tower range.
+Golden Bot range can also be increased by relics and Vault upgrades according to the raw source.
+
+Mechanic: Amplify Bot
+Type: Bot
+Domain: Event Shop
+Section: Bots
+Category: Damage Amplifier
+Aliases: ab
+Disambiguation: This chunk is about Amplify Bot as an individual bot mechanic itself, not its interactions. It is not about Flame Bot, Thunder Bot, Golden Bot, or shorthand bot aliases as a standalone topic.
+Definition: Amplify Bot increases damage against enemies inside its active range.
+Unlocking/Upgrading:
+Like all bots, Amplify Bot is unlocked and upgraded in the Event Shop menu.
+The unlock cost depends on how many other bots have been bought.
+The raw source says each of Amplify Bot's upgrade rows starts from the shared 100-medal base ladder and increases by 40 medals each level.
+Upgrade Stats:
+Duration
+Cooldown
+Bonus
+Range
+Behavior:
+Duration starts at 20 seconds.
+Cooldown starts at 120 seconds.
+Bonus starts at x3.5.
+Range starts at 25m.
+Duration increases the amount of time Amplify Bot is active.
+Cooldown decreases the time between activations.
+Bonus increases the damage bonus against enemies.
+Range increases the area the bot covers while active.
+Labs:
+Amplify Bot Cooldown unlocks in Milestones at Tier 5 Wave 90 and reduces bot cooldown by 1 second per level. Has 25 levels for 25 seconds total reduction.
+Interactions:
+Amplify Bot range is amplified by tower range.

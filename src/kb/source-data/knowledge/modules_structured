@@ -1,0 +1,253 @@
+# Modules Structured Reference
+
+This file reorganizes module knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/modules for side-by-side comparison.
+
+Mechanic: Modules
+Type: System
+Domain: Progression
+Section: Modules
+Category: Gear
+Aliases: none.
+Definition: Modules are equipable gear items that provide main effects, sub-module effects, and sometimes unique effects.
+Behavior:
+Modules come in four types: Cannon, Armor, Generator, and Core.
+Modules are unlocked at Tier 2 Wave 90.
+Modules can be acquired through module tickets or Gems.
+
+Mechanic: Module Types
+Type: Classification
+Domain: Modules
+Section: Modules
+Category: Families
+Aliases: module families
+Definition: Module Types split modules into Cannon, Armor, Generator, and Core families.
+Behavior:
+Cannon modules focus on Attack.
+Armor modules focus on Defense.
+Generator modules focus on Utility.
+Core modules focus on Ultimate Weapons.
+
+Mechanic: Module Acquisition
+Type: Acquisition System
+Domain: Modules
+Section: Modules
+Category: Pulls
+Aliases: acquiring modules
+Definition: Module Acquisition is the process of unlocking and drawing modules with tickets or Gems.
+Behavior:
+Modules unlock at Tier 2 Wave 90.
+Players receive 10 module tickets when modules first unlock.
+Modules can be bought for 20 Gems as a single draw or 200 Gems as a ten-pull.
+
+Mechanic: Module Pull Rates
+Type: Draw Rates
+Domain: Modules
+Section: Modules
+Category: Pulls
+Aliases: module rates
+Definition: Module Pull Rates determine the rarity distribution for purchased module draws.
+Behavior:
+Common module rate is 68.5%.
+Rare module rate is 29%.
+Epic module rate is 2.5%.
+Bad luck protection guarantees an Epic module if 150 purchases pass without one.
+Every ten-pull guarantees at least one Rare module.
+
+Mechanic: Module Banners
+Type: Banner System
+Domain: Modules
+Section: Modules
+Category: Pulls
+Aliases: featured banner; standard banner
+Definition: Module Banners control which module pools and rate modifiers are active for module pulls.
+Behavior:
+The standard banner uses normal Epic pull distributions.
+Modules already owned at Ancestral 5 stars are less likely to be pulled on the standard banner.
+The featured banner gives 50% of Epic pulls to the featured module.
+Featured banners last two weeks and are followed by a one-week break.
+
+Mechanic: Module Upgrading
+Type: Upgrade System
+Domain: Modules
+Section: Modules
+Category: Progression
+Aliases: leveling modules
+Definition: Module Upgrading uses shards and coins to raise a module's level and improve its main stat.
+Behavior:
+Module leveling increases the main stat only.
+The maximum level depends on the module's current rarity.
+Merging to a higher rarity raises the level cap without resetting the current level.
+
+Mechanic: Module Level Caps
+Type: Level Cap Table
+Domain: Modules
+Section: Modules
+Category: Progression
+Aliases: max module level
+Definition: Module Level Caps define the highest module level available at each rarity tier.
+Behavior:
+Rare caps at level 30.
+Rare+ caps at level 40.
+Epic caps at level 60.
+Epic+ caps at level 80.
+Legendary caps at level 100.
+Legendary+ caps at level 120.
+Mythic caps at level 140.
+Mythic+ caps at level 160.
+Ancestral caps at level 200.
+Ancestral star tiers continue to 300 at Ancestral 5.
+
+Mechanic: Module Restore
+Type: Reset Rule
+Domain: Modules
+Section: Modules
+Category: Progression
+Aliases: restore button; reset modules
+Definition: Module Restore resets level investment and returns shard and coin spending.
+Behavior:
+Module Restore costs no resources.
+Module Restore returns all spent shards and coins.
+Reroll shards and Gems are not returned.
+Sub-module effects are retained until the module is leveled again, even if those effects normally require higher levels.
+
+Mechanic: Module Boss Drops
+Type: Drop System
+Domain: Bosses
+Section: Modules
+Category: Drops
+Aliases: boss module drops
+Definition: Module Boss Drops determine boss rewards for reroll shards and module drops.
+Behavior:
+Bosses can drop reroll shards as well as Common and Rare modules.
+Reroll shards have a 15% drop chance.
+Common modules start at a 2% drop chance.
+Rare modules start at a 0.5% drop chance.
+Boss reroll shard quantity increases by tier.
+Module drop rates can be increased by labs.
+
+Mechanic: Module Merging
+Type: Merge System
+Domain: Modules
+Section: Modules
+Category: Progression
+Aliases: merging modules
+Definition: Module Merging raises a module's rarity, main stat value, scaling, and level cap.
+Behavior:
+Common modules cannot be merged.
+Rare modules can merge up to Legendary+.
+Epic modules can merge up to Ancestral 5 stars.
+Merging does not reset the current module level.
+Rare modules never gain unique effects through merging.
+Rare modules keep their original name and do not become matching Epic uniques.
+
+Mechanic: Module Merge Materials
+Type: Merge Materials
+Domain: Modules
+Section: Modules
+Category: Progression
+Aliases: merge materials; wildcard modules
+Definition: Module Merge Materials specify the exact same-module and wildcard requirements for each merge step.
+Behavior:
+The primary module is always the first module selected for merging.
+A module icon requirement means the material must be that same named module at the shown rarity.
+A wildcard requirement can be any module of the same type and shown rarity.
+Ancestral star upgrades require a natural Epic+ copy of the same module and each star increases the main effect.
+
+Mechanic: Module Stats
+Type: Stat Structure
+Domain: Modules
+Section: Modules
+Category: Effects
+Aliases: module stat types
+Definition: Module Stats are split into Main Effect, Sub-Module Effects, and Unique Effects.
+Behavior:
+Every module has a Main Effect.
+Modules can unlock Sub-Module Effect slots as they level.
+Unique Effects only exist on naturally drawn Epic modules.
+
+Mechanic: Module Main Effect
+Type: Main Stat
+Domain: Modules
+Section: Modules
+Category: Effects
+Aliases: main effect
+Definition: Module Main Effect is the primary stat bonus granted by a module and the only effect increased by module level.
+Behavior:
+Main Effect maps to tower damage for Cannon, health for Armor, coin bonus for Generator, and Ultimate Weapon damage for Core.
+Only module level upgrades change the Main Effect.
+Module levels 41, 101, 141, 161, 201, and 241 unlock additional Sub-Module Effect slots.
+
+Mechanic: Module Sub-Module Effects
+Type: Substats
+Domain: Modules
+Section: Modules
+Category: Effects
+Aliases: substats; sub-module effects
+Definition: Module Sub-Module Effects are rerollable secondary stats chosen from a family-specific pool.
+Behavior:
+Sub-Module Effect pools depend on the module family.
+The maximum rarity of a substat matches the module's current rarity, but the current rolled substat can be below that ceiling.
+Substat rarity chances are Common 46.2%, Rare 40%, Epic 10%, Legendary 2.5%, Mythic 1.0%, and Ancestral 0.3%.
+
+Mechanic: Module Reroll Locks
+Type: Reroll Cost Rule
+Domain: Modules
+Section: Modules
+Category: Effects
+Aliases: lock costs; locked substats
+Definition: Module Reroll Locks protect chosen substats from rerolling at the cost of higher reroll-shard prices.
+Behavior:
+Zero locks costs 10 reroll shards.
+One lock costs 40 reroll shards.
+Two locks costs 160 reroll shards.
+Three locks costs 500 reroll shards.
+Four locks costs 1000 reroll shards.
+Five locks costs 1600 reroll shards.
+Six locks costs 2250 reroll shards.
+Seven locks costs 3000 reroll shards.
+Auto Roll can reroll rapidly until acceptable effects and rarities are found.
+Effect bans remove banned effects from the reroll pool when researched.
+
+Mechanic: Unique Effects
+Type: Unique Effect Rule
+Domain: Modules
+Section: Modules
+Category: Effects
+Aliases: unique module effects
+Definition: Unique Effects are special module abilities present only on modules that were naturally drawn as Epics.
+Behavior:
+Epic modules drawn from pulls have Unique Effects.
+Rare modules merged to Epic or higher never gain Unique Effects.
+Natural Epic modules retain their Unique Effects through higher rarities.
+
+Mechanic: Assist Modules
+Type: Assist System
+Domain: Modules
+Section: Modules
+Category: Assist Modules
+Aliases: assist module; assist slot
+Definition: Assist Modules let a second module be equipped in the same slot for weaker versions of its effects.
+Behavior:
+Assist Modules unlock at Tier 19 Wave 40.
+Assist slots cost 1000 stones each to unlock.
+An assist module cannot share the same name as the main module in that slot.
+Assist module level is separate from the main module level.
+Assist efficiency can be improved with stones and with assist-module labs unlocked at Tier 19 Wave 50.
+Assist modules do not bypass hard caps such as defense, Chrono Field slow, Wall rebuild, Shockwave Frequency, Death Defy, or Inner Land Mine cooldown caps.
+As of v27.1, all assist-module multiplier stats are multiplicative.
+Quantity assist substats use FLOOR, not ROUND, so values only add quantity once the floored threshold is reached.
+
+Mechanic: Assist Module Unique Rarity Costs
+Type: Stone Cost Ladder
+Domain: Stones
+Section: Modules
+Category: Assist Modules
+Aliases: assist rarity cost
+Definition: Assist Module Unique Rarity Costs define the stone spending required to raise assist unique-effect quality.
+Behavior:
+Unlocking assist unique effect quality at Epic costs 1000 stones.
+Raising it to Legendary costs 1000 stones.
+Raising it to Mythic costs 1200 stones.
+Raising it to Ancestral costs 1400 stones.
+The listed total is 4600 stones.

@@ -1,0 +1,1218 @@
+# Workshop
+
+The tower has 3 types of upgrades: Attack, Defense and Utility. These upgrades can be bought between rounds with Coins and during rounds with cash. Upgrades bought with coins are permanent while upgrades bought with cash will reset each round.
+
+Ultimate Weapons unlocks and upgrades can also be purchased through the workshop menu.
+
+Mechanic: Damage
+Type: Workshop
+Category: Attack
+Aliases: dmg
+Definition: Damage is the base value used to determine how much each tower projectile deals to enemies. It is the foundational stat for tower projectiles, land mines, and Ultimate Weapons that scale from tower damage.
+Formula:
+Displayed Damage = Workshop × Lab × Damage Card × (1 + Relics) × (1 + Cannon Module %) × Enhancements × Perk1 + Berserker2
+No rounding is applied at any stage.
+Perk1 = (1 + 0.15 × Quantity) × (1 + Standard Perk Bonus).
+Berserker adds stored bonus damage up to a +700% cap (8× base).
+Workshop:
+Unlocked at the start of the game.
+Maximum of 6000 levels.
+Damage can be increased using cards, relics, modules, and Workshop Enhancements.
+Enhancements: Damage Enhancement: 400 upgrades available.
+Labs:
+Damage Lab: Unlocks in Milestones at Tier 1. Increases per-level increment and maximum Workshop Damage.
+Super Tower Bonus Lab: Unlocks in Milestones at Tier 8 Wave 300. Increases the multiplier on the Super Tower card. Has 30 levels.
+Cards: Damage: Common card. Levels 1-7: x1.5, x2, x2.4, x2.8, x3.2, x3.6, x4.
+Masteries: Damage+: Damage card mastery. Unlock + levels 1-9: x1.4, x1.8, x2.2, x2.6, x3, x3.4, x3.8, x4.2, x4.6, x5.
+Modules:
+Cannon category.
+Unique modules: Amplifying Strike. Epic: Killing a Boss or Elite enemy increases Tower damage by 5x for 5 seconds. Legendary: Killing a Boss or Elite enemy increases Tower damage by 5x for 11 seconds. Mythic: Killing a Boss or Elite enemy increases Tower damage by 5x for 18 seconds. Ancestral: Killing a Boss or Elite enemy increases Tower damage by 5x for 26 seconds. Project Funding. Epic: Tower damage is multiplied by 12.5% of the number of digits in your current cash. Legendary: Tower damage is multiplied by 25% of the number of digits in your current cash. Mythic: Tower damage is multiplied by 50% of the number of digits in your current cash. Ancestral: Tower damage is multiplied by 100% of the number of digits in your current cash.
+Substats: None.
+Relics: Rare: 12 relics at 2%; Rare: 1 relic at 3%; Epic: 10 relics at 5%; Legendary: 2 relics at 10%.
+Vault:
+Harmony: Damage Cap Slider (1 unlock).
+Power: 5% Damage (3 upgrades).
+Perks:
+x1.15 Damage (qty 5).
+x1.50 Tower Damage, but Bosses Have 8x Health (qty 1).
+Footguns:
+Berserker adds stored bonus damage and is not a pure multiplier.
+Glass Cannon is more about crowd control than total damage.
+
+Mechanic: Attack Speed
+Type: Workshop
+Category: Attack
+Aliases: aspd; as
+Definition:
+Attack Speed controls how many projectiles the tower fires and also increases projectile travel speed before Light Speed Shots is unlocked. At low values it is close to shots per second, but the stat becomes less linear at higher values and remains under analysis after the V27 performance changes.
+Once Light Speed Shots is completed, normal tower projectiles travel instantly to their target and no longer gain travel speed from Attack Speed.
+Formula:
+Displayed Attack Speed = (Workshop × Lab × Card + Module Sub Effect) × Enhancement
+No rounding is applied at any stage.
+Workshop:
+Unlocked at the start of the game.
+99 workshop levels.
+Base value 1.00; each level adds 0.05 for 5.95 total before other multipliers.
+Enhancements: Attack Speed Enhancement: 75 upgrades available.
+Labs:
+Attack Speed Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases the increment and maximum workshop value.
+Light Speed Shots: Unlocks in Milestones at Tier 7 Wave 10. Makes tower projectiles travel instantly after they are fired.
+Cards: Attack Speed: Common card. Levels 1-7: x1.25, x1.4, x1.55, x1.7, x1.85, x2, x2.15.
+Masteries: Attack Speed+: Attack Speed card mastery. Unlock + levels 1-9: x1.03, x1.06, x1.09, x1.12, x1.15, x1.18, x1.21, x1.24, x1.27, x1.3.
+Modules:
+Cannon category.
+Unique modules: Restorative Bonus. Epic: Packages grant a 50% attack speed boost for 15 seconds, decaying for 60 seconds. Legendary: Packages grant a 50% attack speed boost for 20 seconds, decaying for 60 seconds. Mythic: Packages grant a 50% attack speed boost for 25 seconds, decaying for 60 seconds. Ancestral: Packages grant a 50% attack speed boost for 30 seconds, decaying for 60 seconds.
+Substats: Cannon Attack Speed: Common +0.3; Rare +0.5; Epic +0.7; Legendary +1; Mythic +3; Ancestral +5.
+Relics: Rare: 3 relics at 1%; Epic: 3 relics at 2%.
+Vault: Power: 5% Attack Speed (3 upgrades).
+Perks: None.
+Footguns:
+High Attack Speed is not a clean shots-per-second readout.
+Light Speed Shots changes projectile travel behavior, so pre-LSS and post-LSS comparisons are not one-to-one.
+
+Mechanic: Critical Chance
+Type: Workshop
+Category: Attack
+Aliases: cc
+Definition: Critical Chance is the chance for each projectile to land a critical hit. Values above 100% only matter for Ultimate Weapon damage.
+Formula: None.
+Workshop:
+Unlocked at the start of the game.
+79 workshop levels.
+Each level adds 1% for 80% total workshop Critical Chance.
+Enhancements: None.
+Labs: No normal workshop lab beyond mastery-style support documented here.
+Cards: Critical Chance: Common card. Levels 1-7: 5%, 6%, 7%, 8%, 9%, 10%, 11%.
+Masteries: Critical Chance Mastery (Slow Attack): Critical Chance card mastery. Unlock + levels 1-9: 1%, 2%, 3%, 4%, 5%, 6%, 7%, 8%, 9%, 10%.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Critical Chance: Common +2%; Rare +3%; Epic +6%; Legendary +8%; Mythic +10%; Ancestral +10%.
+Relics: Rare: 3 relics at 1%; Epic: 3 relics at 2%.
+Vault: Power: 1% Critical Chance (3 upgrades).
+Perks: None.
+Footguns: Values above 100% only matter for Ultimate Weapon damage.
+
+Mechanic: Critical Factor
+Type: Workshop
+Category: Attack
+Aliases: cf
+Definition: Critical Factor is the damage multiplier used when a critical hit lands. It also feeds Ultimate Weapon critical-hit behavior when Ultimate Crit is active.
+Formula: None.
+Workshop:
+Unlocked at the start of the game.
+150 workshop levels.
+Base multiplier 1.2; each level adds 0.1 for 16.2 total.
+Enhancements: Critical Factor Enhancement: 400 upgrades available.
+Labs: Critical Factor Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Critical Factor: Common +2x; Rare +4x; Epic +5x; Legendary +8x; Mythic +12x; Ancestral +15x.
+Relics: Rare: 9 relics at 2%; Epic: 12 relics at 5%; Legendary: 2 relics at 10%.
+Vault: Power: 5% Critical Factor (3 upgrades).
+Perks: None.
+Footguns: Critical Factor also feeds Ultimate Weapon crit behavior when Ultimate Crit is in play.
+
+Mechanic: Range
+Type: Workshop
+Category: Attack
+Aliases: None.
+Definition: Range increases how far the tower can fire projectiles. It also changes the firing distance for enemies that use ranged attacks.
+Formula: None.
+Workshop:
+Unlocked after Critical Factor.
+79 workshop levels.
+Starts at 30m; each level adds 0.5m for 69.5m total.
+Enhancements: None.
+Labs: Range Lab: Unlocks in Milestones at Tier 2 Wave 30. Increases workshop increments and maximum value.
+Cards: Range: Common card. Levels 1-7: x1.15, x1.2, x1.25, x1.3, x1.35, x1.4, x1.45.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: Astral Deliverance. Epic: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +20%. Legendary: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +40%. Mythic: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +60%. Ancestral: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +80%.
+Substats: Cannon Attack Range: Common +2m; Rare +4m; Epic +8m; Legendary +12m; Mythic +20m; Ancestral +30m.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Tower range also changes ranged-enemy firing distance, not just your own reach.
+
+Mechanic: Damage / Meter
+Type: Workshop
+Category: Attack
+Aliases: dpm
+Definition: Damage / Meter increases damage based on the enemy's distance from the tower. It applies per whole meter of distance and does not increase fractionally between meters.
+Formula:
+Damage × DPM% × range
+Enhancement support and other damage multipliers still affect the final damage context.
+Workshop:
+Unlocked with Range.
+200 workshop levels.
+Starts at 0% and ramps to 5.9% total.
+Enhancements: Damage / Meter Enhancement: 400 upgrades available.
+Labs: Damage / Meter Lab: Unlocks in Milestones at Tier 3 Wave 30. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Damage / Meter: Common +3%; Rare +5%; Epic +7%; Legendary +14%; Mythic +20%; Ancestral +30%.
+Relics: Rare: 7 relics at 2%; Epic: 7 relics at 5%; Legendary: 2 relics at 10%.
+Vault: Power: 5% Damage / Meter (3 upgrades).
+Perks: None.
+Footguns: Damage / Meter depends on live range context, so the row value alone is incomplete.
+
+Mechanic: Multishot Chance
+Type: Workshop
+Category: Attack
+Aliases: msc
+Definition: Multishot Chance is the chance for the tower to fire at more than one target when it shoots.
+Formula: None.
+Workshop:
+Unlocked by Multishot.
+99 workshop levels.
+Each level adds 0.50% for 49.50% total chance.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Multishot Chance: Common +0.3; Rare +3%; Epic +5%; Legendary +7%; Mythic +10%; Ancestral +13%.
+Relics: None.
+Vault: Power: 4% Multishot Chance (3 upgrades).
+Perks: None.
+Footguns: Effective value depends on enemy count in range.
+
+Mechanic: Multishot Targets
+Type: Workshop
+Category: Attack
+Aliases: mst
+Definition: Multishot Targets is the number of projectiles fired when Multishot activates, assuming enough enemies are in range.
+Formula: None.
+Workshop:
+Unlocked by Multishot.
+7 workshop levels.
+Starts at 2 targets and increases by 1 per level for 9 total targets.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Multishot Targets: Epic +1; Legendary +2; Mythic +3; Ancestral +4.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Extra targets do nothing when there are not enough enemies in range.
+
+Mechanic: Rapid Fire Chance
+Type: Workshop
+Category: Attack
+Aliases: rfc
+Definition: Rapid Fire Chance is the chance for the tower to fire four times faster for a limited duration.
+Formula: None.
+Workshop:
+Unlocked by Rapid Fire.
+85 workshop levels.
+Each level adds 0.40% for 34.00% total chance.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Rapid Fire Chance: Rare +2%; Epic +4%; Legendary +6%; Mythic +9%; Ancestral +12%.
+Relics: None.
+Vault: Power: 4% Rapid Fire Chance (3 upgrades).
+Perks: None.
+Footguns: The displayed chance does not describe uptime by itself because duration is separate.
+
+Mechanic: Rapid Fire Duration
+Type: Workshop
+Category: Attack
+Aliases: rfd
+Definition: Rapid Fire Duration is the amount of time Rapid Fire stays active after it procs.
+Formula: None.
+Workshop:
+Unlocked by Rapid Fire.
+99 workshop levels.
+Raises Rapid Fire uptime duration to a maximum of 5.55 seconds.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Rapid Fire Duration: Rare +0.4s; Epic +0.8s; Legendary +1.4s; Mythic +2.5s; Ancestral +3.5s.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Duration without enough proc chance does not guarantee meaningful uptime.
+
+Mechanic: Bounce Shot Chance
+Type: Workshop
+Category: Attack
+Aliases: bsc
+Definition: Bounce Shot Chance is the chance for a projectile to bounce to another enemy after hitting its current target.
+Formula: None.
+Workshop:
+Unlocked by Bounce Shot.
+85 workshop levels.
+Each level adds 0.80% for 68.00% total chance.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Bounce Shot Chance: Rare +2%; Epic +3%; Legendary +5%; Mythic +9%; Ancestral +12%.
+Relics: None.
+Vault: Power: 4% Bounce Shot Chance (3 upgrades).
+Perks: Bounce Shot +2 (qty 3).
+Footguns: More bounce chance still depends on enemies being in valid bounce range.
+
+Mechanic: Bounce Shot Targets
+Type: Workshop
+Category: Attack
+Aliases: bst
+Definition: Bounce Shot Targets is the number of times a projectile can bounce from enemy to enemy after Bounce Shot activates.
+Formula: None.
+Workshop:
+Unlocked by Bounce Shot.
+7 workshop levels.
+Base target count 1; each level adds 1 for 8 total targets.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Bounce Shot Targets: Epic +1; Legendary +2; Mythic +3; Ancestral +4.
+Relics: None.
+Vault: None.
+Perks: Bounce Shot +2 (qty 3).
+Footguns: More targets do not matter without enough enemies to chain into.
+
+Mechanic: Bounce Shot Range
+Type: Workshop
+Category: Attack
+Aliases: bsr
+Definition: Bounce Shot Range is the distance a projectile can search when chaining from one enemy to another.
+Formula: None.
+Workshop:
+Unlocked by Bounce Shot.
+60 workshop levels.
+Starts at 2.0m; each level adds 0.1m for 8.0m total.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: Astral Deliverance. Epic: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +20%. Legendary: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +40%. Mythic: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +60%. Ancestral: Bounce Shot's range is increased by 3% of the Tower's total range. Each bounce increases the projectile damage by +80%.
+Substats: Cannon Bounce Shot Range: Rare +0.5m; Epic +0.8m; Legendary +1.2m; Mythic +1.6m; Ancestral +2m.
+Relics: None.
+Vault: None.
+Perks: Bounce Shot +2 (qty 3).
+Footguns: Once a bounce target is selected, the projectile can chase farther than the base bounce-range row suggests.
+
+Mechanic: Super Crit Chance
+Type: Workshop
+Category: Attack
+Aliases: scc
+Definition: Super Crit Chance is the chance for a critical hit to become a super critical hit after the normal crit check succeeds.
+Formula: None.
+Workshop:
+Unlocked by Super Critical.
+100 workshop levels.
+Each level adds 0.2% for 20.00% total chance.
+Enhancements: None.
+Labs: Super Crit Chance Lab: Unlocks in Milestones at Tier 5 Wave 200. Adds directly to the workshop value.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: Being Annihilator. Epic: When you super crit, your next 3 shots are guaranteed super crits. Legendary: When you super crit, your next 4 shots are guaranteed super crits. Mythic: When you super crit, your next 5 shots are guaranteed super crits. Ancestral: When you super crit, your next 6 shots are guaranteed super crits.
+Substats: Cannon Super Crit Chance: Epic +3%; Legendary +5%; Mythic +7%; Ancestral +10%.
+Relics: Epic: 3 relics at 2%.
+Vault: Power: 2% Super Crit Chance (3 upgrades).
+Perks: None.
+Footguns: Super Crit only matters after the normal crit check succeeds.
+
+Mechanic: Super Crit Mult
+Type: Workshop
+Category: Attack
+Aliases: scm
+Definition: Super Crit Mult is the extra multiplier applied when a super critical hit lands. It stacks through Critical Factor rather than replacing it.
+Formula: Total super-critical multiplier = Critical Factor × Super Crit Mult
+Workshop:
+Unlocked by Super Critical.
+120 workshop levels.
+Base multiplier 1.2; each level adds 0.1 for 13.2 total.
+Enhancements: Super Crit Mult Enhancement: 400 upgrades available.
+Labs: Super Crit Mult Lab: Unlocks in Milestones at Tier 5 Wave 200. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: None.
+Substats: Cannon Super Crit Multi: Epic +2x; Legendary +3x; Mythic +5x; Ancestral +7x.
+Relics: Epic: 1 relic at 5%.
+Vault: Power: 5% Super Crit Mult (3 upgrades).
+Perks: None.
+Footguns: Super Crit Mult multiplies through Critical Factor rather than replacing it.
+
+Mechanic: Rend Armor Chance
+Type: Workshop
+Category: Attack
+Aliases: rac
+Definition: Rend Armor Chance is the chance for a tower projectile hit to apply a permanent per-enemy damage-taken increase from tower projectiles.
+Formula: None.
+Workshop:
+Unlocked by Rend Armor.
+299 workshop levels.
+Starts at 0.10%; each level adds 0.10% for 30.00% total chance.
+Enhancements: Rend Armor Enhancement: 400 upgrades available.
+Labs: Rend Armor Max: Unlocks in Milestones at Tier 13 Wave 10. Increases the maximum multiplier Rend Armor can apply.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: Havoc Bringer. Epic: 10% chance for Rend Armor to instantly go to max. Legendary: 13% chance for Rend Armor to instantly go to max. Mythic: 15% chance for Rend Armor to instantly go to max. Ancestral: 20% chance for Rend Armor to instantly go to max.
+Substats: Cannon Rend Armor Chance: Legendary +2%; Mythic +5%; Ancestral +8%.
+Relics: None.
+Vault: Power: 4% Rend Armor Chance (3 upgrades).
+Perks: None.
+Footguns: Rend only affects tower projectiles and not every damage source.
+
+Mechanic: Rend Armor Mult
+Type: Workshop
+Category: Attack
+Aliases: ram
+Definition: Rend Armor Mult is the per-stack increase to damage taken by an enemy after Rend Armor applies. It affects tower projectile damage only.
+Formula: None.
+Workshop:
+Unlocked by Rend Armor.
+299 workshop levels.
+Starts at 0.0010×; each level adds 0.0010× for 0.3000× total per-stack value.
+Enhancements: Rend Armor Enhancement: 400 upgrades available.
+Labs: Rend Armor Max: Unlocks in Milestones at Tier 13 Wave 10. Increases the maximum multiplier Rend Armor can apply.
+Cards: None.
+Masteries: None.
+Modules:
+Cannon category.
+Unique modules: Havoc Bringer. Epic: 10% chance for Rend Armor to instantly go to max. Legendary: 13% chance for Rend Armor to instantly go to max. Mythic: 15% chance for Rend Armor to instantly go to max. Ancestral: 20% chance for Rend Armor to instantly go to max.
+Substats: Cannon Rend Armor Multi: Legendary +2%; Mythic +5%; Ancestral +8%.
+Relics: Rare: 1 relic at 2%.
+Vault: Power: 5% Rend Armor Mult (3 upgrades).
+Perks: None.
+Footguns: The row is the per-stack increase, not the full applied end multiplier.
+
+Mechanic: Health
+Type: Workshop
+Category: Defense
+Aliases: hp
+Definition: Health is the tower's maximum health pool. It is the base defensive stat that other survivability systems build on.
+Formula:
+Approximate eHP = (Health + Defense Absolute) / (1 - Defense %)
+With Chrono Field reduction: eHP = (Health / (1 - Chrono Field Reduction %) + Defense Absolute) / (1 - Defense %)
+Workshop:
+Unlocked at the start of the game.
+6000 workshop levels.
+Health is increased further by labs, cards, perks, packages, and enhancements.
+Enhancements: Health Enhancement: 400 upgrades available.
+Labs: Health Lab: Unlocked at the start. Increases workshop increments and maximum Health.
+Cards: Health: Common card. Levels 1-7: x1.5, x2, x2.4, x2.8, x3.2, x3.6, x4.
+Masteries: Health+: Health card mastery. Unlock + levels 1-9: x1.2, x1.4, x1.6, x1.8, x2, x2.2, x2.4, x2.6, x2.8, x3.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: None.
+Relics: Rare: 14 relics at 2%; Epic: 10 relics at 5%; Legendary: 2 relics at 10%.
+Vault: Power: 5% Health (3 upgrades).
+Perks:
+x1.20 Max Health (qty 5).
+x1.80 Coins, but Tower Max Health -70% (qty 1).
+Tower Health Regen x8.00, but Tower Max Health -60% (qty 1).
+Footguns: eHP depends on Defense % and Defense Absolute, not Health in isolation.
+
+Mechanic: Health Regen
+Type: Workshop
+Category: Defense
+Aliases: regen
+Definition: Health Regen is the amount of tower health regenerated per second.
+Formula: None.
+Workshop:
+Unlocked at the start of the game.
+6000 workshop levels.
+Health Regen is multiplied by cards and further affected by trade-off perks and wall interactions.
+Enhancements: Health Regen Enhancement: 400 upgrades available.
+Labs: Health Regen Lab: Unlocked at the start. Increases workshop increments and maximum value. Has 100 levels.
+Cards: Health Regen: Common card. Levels 1-7: x1.4, x1.6, x1.8, x2, x2.2, x2.4, x2.6.
+Masteries: Health Regen+: Health Regen card mastery. Unlock + levels 1-9: x1.4, x1.8, x2.2, x2.6, x3, x3.4, x3.8, x4.2, x4.6, x5.
+Modules:
+Armor category.
+Unique modules: Wormhole Redirector. Epic: Health Regen can heal up to 25% of Package Max Recovery. Legendary: Health Regen can heal up to 50% of Package Max Recovery. Mythic: Health Regen can heal up to 75% of Package Max Recovery. Ancestral: Health Regen can heal up to 100% of Package Max Recovery.
+Substats: Defense Health Regen: Common +0.2x; Rare +0.4x; Epic +0.6x; Legendary +1x; Mythic +2x; Ancestral +4x.
+Relics: Rare: 4 relics at 2%; Epic: 4 relics at 5%.
+Vault: Power: 5% Health Regen (3 upgrades).
+Perks:
+x1.75 Health Regen (qty 5).
+Tower Health Regen x8.00, but Tower Max Health -60% (qty 1).
+Enemies Have -50% Health, but Tower Health Regen and Lifesteal -90% (qty 1).
+Footguns: High regen is still constrained by health-cap context and trade-off penalties.
+
+Mechanic: Defense %
+Type: Workshop
+Category: Defense
+Aliases: def%
+Definition: Defense % is the percent of incoming damage reduced before Defense Absolute is applied.
+Formula:
+Damage taken = Incoming Damage × (1 - Defense %)
+Defense % is hard-capped at 98% even if additive sources exceed 100%.
+Workshop:
+Unlocked with Defense Absolute.
+99 workshop levels.
+Each level adds 0.5% for 49.5% total workshop reduction.
+Enhancements: None.
+Labs: Defense Percent Lab: Unlocks in Milestones at Tier 5 Wave 30. Adds directly to the workshop total.
+Cards: Extra Defense: Common card. Levels 1-7: 5%, 6%, 7%, 8%, 9%, 10%, 11%.
+Masteries: Extra Defense+: Extra Defense card mastery. Unlock + levels 1-9: 0.7%, 1.4%, 2.1%, 2.8%, 3.5%, 4.2%, 4.9%, 5.6%, 6.3%, 7%.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Defense: Common +1%; Rare +2%; Epic +3%; Legendary +5%; Mythic +6%; Ancestral +8%.
+Relics: Rare: 2 relics at 1%; Epic: 1 relic at 2%.
+Vault: Power: 0.5% Defense % (3 upgrades).
+Perks: Defense Percent +4.00 (qty 5).
+Footguns: Defense % is hard-capped at 98% even if additive sources exceed 100%.
+
+Mechanic: Defense Absolute
+Type: Workshop
+Category: Defense
+Aliases: dabs; defabs
+Definition: Defense Absolute is flat damage reduced from enemy attacks after Defense % is applied.
+Formula:
+Damage received = Incoming Damage × (1 - Defense %) - Defense Absolute
+Enemy heat-up can raise true incoming damage above the displayed enemy-attack value.
+Workshop:
+Unlocked with Defense %.
+5000 workshop levels.
+Defense Absolute scales through labs, cards, relics, and enhancements.
+Enhancements: Defense Absolute Enhancement: 400 upgrades available.
+Labs: Defense Absolute Lab: Unlocked at the start. Increases workshop increments and maximum value. Has 100 levels.
+Cards: Fortress: Common card. Levels 1-7: x1.3, x1.45, x1.6, x0.75, x1.9, x2.05, x2.2.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Defense Absolute: Common 0.15x; Rare 0.25x; Epic +0.4x; Legendary +1x; Mythic +5x; Ancestral +10x.
+Relics: Rare: 6 relics at 2%; Epic: 10 relics at 5%; Legendary: 1 relic at 10%.
+Vault: Power: 5% Defense Absolute (3 upgrades).
+Perks: x1.15 Defense Absolute (qty 5).
+Footguns: Enemy heat-up can make the displayed enemy damage misleading.
+
+Mechanic: Thorn Damage
+Type: Workshop
+Category: Defense
+Aliases: None.
+Definition: Thorn Damage deals a percent of the enemy's max health when that enemy hits the tower. It also applies to ranged attackers and deals half damage to bosses.
+Formula: None.
+Workshop:
+Unlocked after Defense % and Defense Absolute.
+99 workshop levels.
+Each level adds 1% for 99% total workshop thorns, or 49.5% to bosses.
+Enhancements: None.
+Labs: Garlic Thorns: Unlocks at Tier 2 Wave 1000. Makes Vampire elites take a percent of thorn damage while using ranged attacks.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Sharp Fortitude. Epic: Increases wall's health and regen by x1.25. Enemies take +1% increased damage from wall thorns per subsequent hit. Legendary: Increases wall's health and regen by x1.5. Enemies take +1% increased damage from wall thorns per subsequent hit. Mythic: Increases wall's health and regen by x2. Enemies take +1% increased damage from wall thorns per subsequent hit. Ancestral: Increases wall's health and regen by x2.5. Enemies take +1% increased damage from wall thorns per subsequent hit.
+Substats: Defense Thorns Damage: Epic +2%; Legendary +4%; Mythic +7%; Ancestral +10%.
+Relics: Rare: 2 relics at 1%; Epic: 4 relics at 2%.
+Vault: Power: 5% Thorn Damage (3 upgrades).
+Perks: None.
+Footguns: Thorns does not trigger Lifesteal, and Protectors reduce thorn damage in range.
+
+Mechanic: Lifesteal
+Type: Workshop
+Category: Defense
+Aliases: ls
+Definition: Lifesteal heals the tower by a percent of projectile damage dealt on hit, including bounce-shot and multishot projectiles.
+Formula: None.
+Workshop:
+Unlocked after Thorn Damage.
+80 workshop levels.
+Starts at 0 and reaches 4.46% total workshop Lifesteal.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Lifesteal: Epic +0.3%; Legendary +0.5%; Mythic +1.5%; Ancestral +2%.
+Relics: None.
+Vault: None.
+Perks:
+Lifesteal x2.50, but Knockback Force -70% (qty 1).
+Enemies Have -50% Health, but Tower Health Regen and Lifesteal -90% (qty 1).
+Footguns: Lifesteal works on projectile damage and can be gutted by trade-off perks.
+
+Mechanic: Knockback Chance
+Type: Workshop
+Category: Defense
+Aliases: kbc
+Definition: Knockback Chance is the chance for the tower to push enemies away when it hits them.
+Formula: None.
+Workshop:
+Unlocked by Knockback.
+80 workshop levels.
+Each level adds 1% for 80% total knockback chance.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Knockback Chance: Epic +2%; Legendary +4%; Mythic +6%; Ancestral +9%.
+Relics: None.
+Vault: Power: 2% Knockback Chance (3 upgrades).
+Perks: None.
+Footguns: Enemy mass and wave scaling can make raw chance look better than the actual control effect.
+
+Mechanic: Knockback Force
+Type: Workshop
+Category: Defense
+Aliases: kbf
+Definition: Knockback Force controls how strongly knockback pushes enemies away after a successful knockback roll.
+Formula: No explicit universal unit is documented because enemy mass changes the real result.
+Workshop:
+Unlocked by Knockback.
+40 workshop levels.
+Starts at 0.4; each level adds 0.142 for 6.08 total force.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Knockback Force: Epic +0.1; Legendary +0.4; Mythic +0.9; Ancestral +1.5.
+Relics: Rare: 2 relics at 2%; Epic: 3 relics at 5%.
+Vault: Power: 5% Knockback Force (3 upgrades).
+Perks: Lifesteal x2.50, but Knockback Force -70% (qty 1).
+Footguns: There is no clean universal unit because enemy mass changes the real result.
+
+Mechanic: Orb Speed
+Type: Workshop
+Category: Defense
+Aliases: None.
+Definition: Orb Speed is the rotational speed of the workshop orbs around the tower. It also affects Extra Orb speed.
+Formula:
+Orb Speed is measured in rotations per minute.
+Adjusting orb radius changes effective travel speed while RPM remains fixed.
+Workshop:
+Unlocked by Orbs.
+38 workshop levels.
+Starts at 0.4 and reaches 6.10 total speed.
+Enhancements: None.
+Labs: Orb Speed; Extra Orb Adjuster; Extra Extra Orbs.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Orb Speed: Epic +1; Legendary 1.5; Mythic +2; Ancestral +3.
+Relics: Rare: 2 relics at 2%; Epic: 4 relics at 5%.
+Vault: Power: 5% Orb Speed (3 upgrades).
+Perks: None.
+Footguns: Changing extra-orb radius alters effective travel speed while RPM stays fixed.
+
+Mechanic: Orbs
+Type: Workshop
+Category: Defense
+Aliases: None.
+Definition: Orbs are the number of workshop orbs rotating around the tower. They instantly kill most enemies they touch, with important exceptions for bosses, elites, protectors, and heat rules.
+Formula: None.
+Workshop:
+Unlocked by Orbs.
+4 workshop levels.
+Each level adds one orb for 4 workshop orbs before other bonuses.
+Enhancements: None.
+Labs: Orb Boss Hit; Extra Extra Orbs.
+Cards: Extra Orb: Rare card. Levels 1-7: 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Orbital Augment. Epic: Adds 2 orbiting Electrons around the tower. Each Electron deals damage equal to 10% of wave health to any enemies they hit. Legendary: Adds 4 orbiting Electrons around the tower. Each Electron deals damage equal to 10% of wave health to any enemies they hit. Mythic: Adds 6 orbiting Electrons around the tower. Each Electron deals damage equal to 10% of wave health to any enemies they hit. Ancestral: Adds 8 orbiting Electrons around the tower. Each Electron deals damage equal to 10% of wave health to any enemies they hit. Negative Mass Projector. Epic: If an orb doesn't kill the enemy it applies a stacking debuff, reducing its damage and speed by 1% per hit, to a max reduction of 50%. Legendary: If an orb doesn't kill the enemy it applies a stacking debuff, reducing its damage and speed by 1.5% per hit, to a max reduction of 50%. Mythic: If an orb doesn't kill the enemy it applies a stacking debuff, reducing its damage and speed by 2% per hit, to a max reduction of 50%. Ancestral: If an orb doesn't kill the enemy it applies a stacking debuff, reducing its damage and speed by 2.5% per hit, to a max reduction of 50%.
+Substats: Defense Orbs: Mythic +1; Ancestral +2.
+Relics: None.
+Vault: Power: 1 Orbs (1 upgrade).
+Perks: Orbs +1 (qty 2).
+Footguns: Bosses, elites, protectors, and heat rules all break the simple "orbs always kill" assumption.
+
+Mechanic: Shockwave Size
+Type: Workshop
+Category: Defense
+Aliases: sws
+Definition: Shockwave Size is the size of the shockwave pulse that pushes enemies away from the tower, except bosses.
+Formula: None.
+Workshop:
+Unlocked by Shockwave.
+35 workshop levels.
+Starts at 0.6 and reaches 2.35 total size.
+Enhancements: None.
+Labs: Shockwave Size: Unlocks in Milestones at Tier 3 Wave 50. Adds directly to the workshop value.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Anti-Cube Portal. Epic: Enemies take x10 damage for 7s after they are hit by a shockwave. Legendary: Enemies take x15 damage for 7s after they are hit by a shockwave. Mythic: Enemies take x20 damage for 7s after they are hit by a shockwave. Ancestral: Enemies take x25 damage for 7s after they are hit by a shockwave.
+Substats: Defense Shockwave Size: Epic +0.1; Legendary +0.3; Mythic +0.7; Ancestral +1.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Bigger shockwaves still do not move bosses.
+
+Mechanic: Shockwave Frequency
+Type: Workshop
+Category: Defense
+Aliases: swf
+Definition: Shockwave Frequency is the time interval between shockwave pulses.
+Formula: Lower values are better because the stat is a time interval, not a rate.
+Workshop:
+Unlocked by Shockwave.
+40 workshop levels.
+Starts at 20 seconds and decreases by 0.15 seconds per level to 14.00 seconds, with a hard cap of 7 seconds.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Anti-Cube Portal. Epic: Enemies take x10 damage for 7s after they are hit by a shockwave. Legendary: Enemies take x15 damage for 7s after they are hit by a shockwave. Mythic: Enemies take x20 damage for 7s after they are hit by a shockwave. Ancestral: Enemies take x25 damage for 7s after they are hit by a shockwave.
+Substats: Defense Shockwave Frequency: Epic -1; Legendary -2; Mythic +-3; Ancestral -4.
+Relics: None.
+Vault: Power: -1s Shockwave Frequency (1 upgrade).
+Perks: None.
+Footguns: Lower frequency values are better because the stat is a time interval.
+
+Mechanic: Land Mine Chance
+Type: Workshop
+Category: Defense
+Aliases: lmc
+Definition: Land Mine Chance is the chance for enemies to drop land mines that later explode when triggered or when their timer expires.
+Formula: None.
+Workshop:
+Unlocked by Land Mine.
+50 workshop levels.
+Each level adds 0.60% for 30.00% total chance.
+Enhancements: None.
+Labs: Land Mine Decay: Unlocks in Milestones at Tier 6 Wave 30. Increases how long mines remain before exploding.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Space Displacer. Epic: Landmines have a 15% chance to spawn as Inner Land Mines instead of a normal mine. Legendary: Landmines have a 20% chance to spawn as Inner Land Mines instead of a normal mine. Mythic: Landmines have a 25% chance to spawn as Inner Land Mines instead of a normal mine. Ancestral: Landmines have a 30% chance to spawn as Inner Land Mines instead of a normal mine. Magnetic Hook. Epic: 1 Inner Land Mine is fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Legendary: 2 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Mythic: 3 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Ancestral: 4 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range.
+Substats: Defense Land Mine Chance: Rare +1.5%; Epic +3%; Legendary +6%; Mythic +9%; Ancestral +12%.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Spawn chance does not describe actual land-mine uptime because decay and triggering matter too.
+
+Mechanic: Land Mine Damage
+Type: Workshop
+Category: Defense
+Aliases: lmd
+Definition: Land Mine Damage is the percent of tower damage dealt by land mines. It uses average critical and super-critical behavior in its damage model.
+Formula: Land Mine Damage = Land Mine Damage % × Damage × (1 + Critical Factor × Critical Chance) × (1 + Super Crit Mult × Super Crit Chance × Crit Chance)
+Workshop:
+Unlocked by Land Mine.
+200 workshop levels.
+Starts at 100%; each level adds 10% for 2100% total workshop damage.
+Enhancements: Land Mine Damage Enhancement: 400 upgrades available.
+Labs: Land Mine Damage: Unlocks in Milestones at Tier 6 Wave 30. Adds extra percent damage. Has 20 levels.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Space Displacer. Epic: Landmines have a 15% chance to spawn as Inner Land Mines instead of a normal mine. Legendary: Landmines have a 20% chance to spawn as Inner Land Mines instead of a normal mine. Mythic: Landmines have a 25% chance to spawn as Inner Land Mines instead of a normal mine. Ancestral: Landmines have a 30% chance to spawn as Inner Land Mines instead of a normal mine. Magnetic Hook. Epic: 1 Inner Land Mine is fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Legendary: 2 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Mythic: 3 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Ancestral: 4 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range.
+Substats: Defense Land Mine Damage: Rare +0.3x; Epic +0.5x; Legendary +1.5x; Mythic +5x; Ancestral +8x.
+Relics: None.
+Vault: None.
+Perks: Land Mine Damage x3.50 (qty 5).
+Footguns: Real damage depends on averaged crit and super-crit behavior, not the row alone.
+
+Mechanic: Land Mine Radius
+Type: Workshop
+Category: Defense
+Aliases: lmr
+Definition: Land Mine Radius is the explosion radius of land mines.
+Formula: None.
+Workshop:
+Unlocked by Land Mine.
+50 workshop levels.
+Reaches 1.50 total radius.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Space Displacer. Epic: Landmines have a 15% chance to spawn as Inner Land Mines instead of a normal mine. Legendary: Landmines have a 20% chance to spawn as Inner Land Mines instead of a normal mine. Mythic: Landmines have a 25% chance to spawn as Inner Land Mines instead of a normal mine. Ancestral: Landmines have a 30% chance to spawn as Inner Land Mines instead of a normal mine. Magnetic Hook. Epic: 1 Inner Land Mine is fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Legendary: 2 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Mythic: 3 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range. Ancestral: 4 Inner Land Mines are fired at Bosses as they enter Tower range, and 25% of Elites have an Inner Land Mine fired at them as they enter tower range.
+Substats: Defense Land Mine Radius: Rare +0.1; Epic +0.15; Legendary +0.3; Mythic +0.75; Ancestral +1.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Bigger radius changes hit coverage, not proc rate.
+
+Mechanic: Death Defy
+Type: Workshop
+Category: Defense
+Aliases: dd
+Definition: Death Defy is the chance for a lethal hit on the tower to be ignored.
+Formula:
+None.
+Activation order matters against Energy Shield, Second Wind, Demon Mode, and Smart Nuke Automation.
+Workshop:
+Unlocked after Land Mine Chance, Land Mine Damage, and Land Mine Radius.
+75 workshop levels.
+Each level adds 0.4% for 30.00% total Death Defy chance.
+Enhancements: None.
+Labs: None.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Death Defy: Legendary +1.5%; Mythic +3.5%; Ancestral +5%.
+Relics: None.
+Vault: Power: 2% Death Defy (3 upgrades).
+Perks: None.
+Footguns: Activation priority with Energy Shield, Second Wind, Demon Mode, and Nuke matters more than the displayed percentage alone.
+
+Mechanic: Wall Health
+Type: Workshop
+Category: Defense
+Aliases: None.
+Definition: Wall Health is the wall's maximum health as a percentage of tower health.
+Formula: Wall Health is derived from tower health and is not a standalone flat pool.
+Workshop:
+Unlocked by Wall.
+1800 workshop levels.
+Starts at 20% of tower health and increases by 0.1% per level for 200.00% total tower health.
+Enhancements: Wall Health Enhancement: 400 upgrades available.
+Labs: Wall Health; Wall Regen; Wall Fortification.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: Sharp Fortitude. Epic: Increases wall's health and regen by x1.25. Enemies take +1% increased damage from wall thorns per subsequent hit. Legendary: Increases wall's health and regen by x1.5. Enemies take +1% increased damage from wall thorns per subsequent hit. Mythic: Increases wall's health and regen by x2. Enemies take +1% increased damage from wall thorns per subsequent hit. Ancestral: Increases wall's health and regen by x2.5. Enemies take +1% increased damage from wall thorns per subsequent hit.
+Substats: Defense Wall Health: Epic +0.2x; Legendary +0.4x; Mythic +0.9x; Ancestral +1.2x.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Wall Health is a percentage of tower health, not a standalone flat pool.
+
+Mechanic: Wall Rebuild
+Type: Workshop
+Category: Defense
+Aliases: None.
+Definition: Wall Rebuild is the time it takes for the wall to rebuild after it is destroyed.
+Formula: Lower values are better because the stat is a rebuild timer.
+Workshop:
+Unlocked by Wall.
+300 workshop levels.
+Each level reduces rebuild time by 2 seconds to a 600-second workshop minimum, with a current hard cap of 150 seconds.
+Enhancements: None.
+Labs: Wall Rebuild; Wall Invincibility.
+Cards: None.
+Masteries: None.
+Modules:
+Armor category.
+Unique modules: None.
+Substats: Defense Wall Rebuild: Epic -20s; Legendary -40s; Mythic -60s; Ancestral -100s.
+Relics: Rare: 1 relic at 2s.
+Vault: Power: -20s Wall Rebuild (1 upgrade).
+Perks: None.
+Footguns: Lower rebuild time is better, and the hard cap is lower than the raw workshop minimum.
+
+Mechanic: Cash Bonus
+Type: Workshop
+Category: Utility
+Aliases: cash
+Definition: Cash Bonus is the multiplier applied to cash earned from cash-producing sources, including wave bonus cash.
+Formula: None.
+Workshop:
+Unlocked with Cash / Wave.
+149 workshop levels.
+Starts at 1.00× and increases by 0.01 per level for 2.49× total.
+Enhancements: Cash Bonus Enhancement: 300 upgrades available.
+Labs: Cash Bonus Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases workshop increments and maximum value.
+Cards: Cash: Common card. Levels 1-7: x1.2, x1.4, x1.6, x1.8, x2, x2.2, x2.4.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: None.
+Substats: Generator Cash Bonus: Common +0.1x; Rare +0.2x; Epic +0.3x; Legendary +0.5x; Mythic +1.2x; Ancestral +2.5x.
+Relics: Rare: 4 relics at 2%; Epic: 2 relics at 5%.
+Vault: Power: 5% Cash (3 upgrades).
+Perks: x1.15 Cash Bonus (qty 5).
+Footguns: Cash Bonus does not raise interest or max interest by itself outside the enhancement effect.
+
+Mechanic: Cash / Wave
+Type: Workshop
+Category: Utility
+Aliases: None.
+Definition: Cash / Wave is the cash paid after completing a wave.
+Formula: Cash / Wave is multiplied by Cash Bonus and is paid before interest is calculated.
+Workshop:
+Unlocked with Cash Bonus.
+149 workshop levels.
+Starts at 0 and increases by 4 per level for 596 total.
+Enhancements: None.
+Labs: Cash / Wave Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: None.
+Substats: Generator Cash / Wave: Common +30; Rare +50; Epic +100; Legendary +200; Mythic +500; Ancestral +1000.
+Relics: Rare: 4 relics at 2%; Epic: 2 relics at 5%.
+Vault: Power: 100% Cash / Wave (3 upgrades).
+Perks: x12.00 Cash Per Wave, but Enemy Kills Don't Give Cash (qty 1).
+Footguns: Cash / Wave is paid before interest, so ordering matters in calculations.
+
+Mechanic: Coins / Kill Bonus
+Type: Workshop
+Category: Utility
+Aliases: cpk
+Definition: Coins / Kill Bonus is the workshop multiplier for coins earned from destroying enemies.
+Formula:
+Coins / Kill = (Workshop × Coins / Kill Lab + Module Effect) × (1 + Coin Bonus Enhancement) × (1 + All Coin Bonuses Perk Effect) × (Coin Trade-Off Perk Effect)
+Solve without rounding. Enhancement is effectively double-counted through both tier bonus and Coins / Kill context.
+Workshop:
+Unlocked with Coins / Wave after Cash Bonus and Cash / Wave.
+149 workshop levels.
+Starts at 1.00× and increases by 0.01 per level for 2.49× total.
+Enhancements: Coin Bonus Enhancement: 200 upgrades available on the shared enhancement row.
+Labs: Coins / Kill Bonus Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Black Hole Digestor. Epic: Temporarily get +3% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Legendary: Temporarily get +5% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Mythic: Temporarily get +7% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Ancestral: Temporarily get +10% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range.
+Substats: Generator Coins / Kill Bonus: Common +0.1x; Rare +0.2x; Epic +0.3x; Legendary +0.4x; Mythic +0.5x; Ancestral +0.6x.
+Relics: Rare: 10 relics at 2%; Rare: 1 relic at 5%; Epic: 9 relics at 5%; Legendary: 1 relic at 10%.
+Vault: Power: 5% Coins / Kill (3 upgrades).
+Perks:
+x1.15 All Coin Bonuses (qty 5).
+x1.80 Coins, but Tower Max Health -70% (qty 1).
+Footguns: Coin Bonus enhancement is effectively double-counted through both tier bonus and Coins / Kill Bonus.
+
+Mechanic: Coins / Wave
+Type: Workshop
+Category: Utility
+Aliases: None.
+Definition: Coins / Wave is the number of coins earned after completing a wave.
+Formula: Coins / Wave is increased by All Coin Bonuses and tier coin multipliers.
+Workshop:
+Unlocked with Coins / Kill Bonus after Cash Bonus and Cash / Wave.
+149 workshop levels.
+Starts at 1 and increases by 1 per level for 150 total.
+Enhancements: Coin Bonus Enhancement: 200 upgrades available on the shared enhancement row.
+Labs: Coins / Wave Lab: Unlocks in Milestones at Tier 1 Wave 30. Increases workshop increments and maximum value.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: None.
+Substats: Generator Coins / Wave: Common +20; Rare +35; Epic +60; Legendary +120; Mythic +200; Ancestral +350.
+Relics: Rare: 10 relics at 2%; Rare: 1 relic at 5%; Epic: 9 relics at 5%; Legendary: 1 relic at 10%.
+Vault: Power: 100% Coins / Wave (3 upgrades).
+Perks:
+x1.15 All Coin Bonuses (qty 5).
+x1.80 Coins, but Tower Max Health -70% (qty 1).
+Footguns: Tier-bonus multipliers can change real wave-coin output without changing the row by themselves.
+
+Mechanic: Free Attack Upgrade
+Type: Workshop
+Category: Utility
+Aliases: fau
+Definition: Free Attack Upgrade is the chance to receive a free attack-stat level after a wave.
+Formula: If Free Upgrade chance exceeds 100%, extra rolls can grant additional upgrades.
+Workshop:
+Unlocked by Free Upgrades.
+99 workshop levels.
+Each level adds 0.5% for 49.5% total workshop chance.
+Enhancements: Free Upgrades Enhancement: 100 upgrades available on the shared enhancement row.
+Labs: None.
+Cards: Free Upgrades: Rare card. Levels 1-7: 4%, 5%, 6%, 7%, 8%, 9%, 10%.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Black Hole Digestor. Epic: Temporarily get +3% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Legendary: Temporarily get +5% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Mythic: Temporarily get +7% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Ancestral: Temporarily get +10% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range.
+Substats: Generator Free Attack Upgrade: Common +2%; Rare +4%; Epic +6%; Legendary +8%; Mythic +10%; Ancestral +12%.
+Relics: Rare: 4 relics at 1%; Rare: 1 relic at 2%; Epic: 1 relic at 2%.
+Vault: Power: 5% Free Attack Upgrade (3 upgrades).
+Perks: Free Upgrade Chance for All +5.0% (qty 5).
+Footguns: Free upgrades can force unwanted attack-stat growth if targets are not constrained.
+
+Mechanic: Free Defense Upgrade
+Type: Workshop
+Category: Utility
+Aliases: fdu
+Definition: Free Defense Upgrade is the chance to receive a free defense-stat level after a wave.
+Formula: If Free Upgrade chance exceeds 100%, extra rolls can grant additional upgrades.
+Workshop:
+Unlocked by Free Upgrades.
+99 workshop levels.
+Each level adds 0.5% for 49.5% total workshop chance.
+Enhancements: Free Upgrades Enhancement: 100 upgrades available on the shared enhancement row.
+Labs: None.
+Cards: Free Upgrades: Rare card. Levels 1-7: 4%, 5%, 6%, 7%, 8%, 9%, 10%.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Black Hole Digestor. Epic: Temporarily get +3% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Legendary: Temporarily get +5% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Mythic: Temporarily get +7% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Ancestral: Temporarily get +10% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range.
+Substats: Generator Free Defense Upgrade: Common +2%; Rare +4%; Epic +6%; Legendary +8%; Mythic +10%; Ancestral +12%.
+Relics: Rare: 5 relics at 1%.
+Vault: Power: 5% Free Defense Upgrade (3 upgrades).
+Perks: Free Upgrade Chance for All +5.0% (qty 5).
+Footguns: Free upgrades can force unwanted defense-stat growth if targets are not constrained.
+
+Mechanic: Free Utility Upgrade
+Type: Workshop
+Category: Utility
+Aliases: fuu
+Definition: Free Utility Upgrade is the chance to receive a free utility-stat level after a wave.
+Formula: If Free Upgrade chance exceeds 100%, extra rolls can grant additional upgrades.
+Workshop:
+Unlocked by Free Upgrades.
+99 workshop levels.
+Each level adds 0.5% for 49.5% total workshop chance.
+Enhancements: Free Upgrades Enhancement: 100 upgrades available on the shared enhancement row.
+Labs: None.
+Cards: Free Upgrades: Rare card. Levels 1-7: 4%, 5%, 6%, 7%, 8%, 9%, 10%.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Black Hole Digestor. Epic: Temporarily get +3% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Legendary: Temporarily get +5% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Mythic: Temporarily get +7% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range. Ancestral: Temporarily get +10% extra Coins / Kill bonus for each free upgrade you got on the current wave. Free upgrades cannot increase the Tower Range.
+Substats: Generator Free Utility Upgrade: Common +2%; Rare +4%; Epic +6%; Legendary +8%; Mythic +10%; Ancestral +12%.
+Relics: Rare: 2 relics at 1%; Epic: 1 relic at 2%.
+Vault: Power: 5% Free Utility Upgrade (3 upgrades).
+Perks: Free Upgrade Chance for All +5.0% (qty 5).
+Footguns: Free upgrades can force unwanted utility-stat growth if targets are not constrained.
+
+Mechanic: Interest / Wave
+Type: Workshop
+Category: Utility
+Aliases: None.
+Definition: Interest / Wave is the percent of cash kept on hand that is earned at the end of a wave.
+Formula:
+Interest = (Current Cash + Cash / Wave × Cash Bonus) × Interest / Wave %
+Max Interest can cap the payout even when Interest / Wave keeps rising.
+Workshop:
+Unlocked after Free Upgrades.
+99 workshop levels.
+Starts at 0% and increases by 0.06% per level for 5.94% total.
+Enhancements: None.
+Labs: Interest; Max Interest.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: None.
+Substats: Generator Interest / Wave: Epic +2%; Legendary +4%; Mythic +6%; Ancestral +8%.
+Relics: None.
+Vault: Power: 10% Interest / Wave (3 upgrades).
+Perks: Interest x1.50 (qty 5).
+Footguns: Max Interest can cap the gain even when Interest / Wave keeps rising.
+
+Mechanic: Recovery Amount
+Type: Workshop
+Category: Utility
+Aliases: None.
+Definition: Recovery Amount is the amount of bonus health each recovery package adds to the tower.
+Formula: Each package heals a percentage of the tower's current maximum health.
+Workshop:
+Unlocked by Recovery Packages.
+300 workshop levels.
+Starts at 14%; each level adds 0.40% for 134.00% total.
+Enhancements: Recovery Package Enhancement: 400 upgrades available on the shared enhancement row.
+Labs: Recovery Package Amount.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: None.
+Substats: Generator Recovery Amount: Epic +3%; Legendary +5%; Mythic +7%; Ancestral +10%.
+Relics: Rare: 2 relics at 2%; Epic: 2 relics at 5%.
+Vault: Power: 5% Recovery Amount (3 upgrades).
+Perks: None.
+Footguns: Recovery Amount only matters when packages actually spawn and cannot replace non-package healing limits.
+
+Mechanic: Max Recovery
+Type: Workshop
+Category: Utility
+Aliases: None.
+Definition: Max Recovery is how far above normal maximum health recovery packages can heal the tower.
+Formula: Packages can restore beyond normal max health; Lifesteal and Health Regen cannot.
+Workshop:
+Unlocked by Recovery Packages.
+500 workshop levels.
+Starts at 1.00× health and adds 0.031 per level for 16.50× total.
+Enhancements: Recovery Package Enhancement: 400 upgrades available on the shared enhancement row.
+Labs: Recovery Package Max.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Wormhole Redirector. Epic: Health Regen can heal up to 25% of Package Max Recovery. Legendary: Health Regen can heal up to 50% of Package Max Recovery. Mythic: Health Regen can heal up to 75% of Package Max Recovery. Ancestral: Health Regen can heal up to 100% of Package Max Recovery.
+Substats: Generator Max Recovery: Epic +0.4x; Legendary +0.7x; Mythic +1x; Ancestral +1.5x.
+Relics: None.
+Vault: Power: 20% Max Recovery (3 upgrades).
+Perks: None.
+Footguns: Only packages can heal above normal max health.
+
+Mechanic: Package Chance
+Type: Workshop
+Category: Utility
+Aliases: rpc; pck
+Definition: Package Chance is the chance for a recovery package to spawn after a wave.
+Formula:
+None.
+Package Chance can reach a displayed cap through lab, card, and substat stacking.
+Workshop:
+Unlocked by Recovery Packages.
+60 workshop levels.
+Starts at 6%; each level adds 0.40% for 30% total workshop chance.
+Enhancements: Recovery Package Enhancement: 400 upgrades available on the shared enhancement row.
+Labs: Package After Boss; Recovery Package Chance.
+Cards: Recovery Package Chance: Rare card. Levels 1-7: 15%, 18%, 21%, 24%, 27%, 30%, 33%.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Galaxy Compressor. Epic: Collecting a recovery package reduces the cooldown of all Ultimate Weapons by 10s. Legendary: Collecting a recovery package reduces the cooldown of all Ultimate Weapons by 13s. Mythic: Collecting a recovery package reduces the cooldown of all Ultimate Weapons by 17s. Ancestral: Collecting a recovery package reduces the cooldown of all Ultimate Weapons by 20s. Restorative Bonus. Epic: Packages grant a 50% attack speed boost for 15 seconds, decaying for 60 seconds. Legendary: Packages grant a 50% attack speed boost for 20 seconds, decaying for 60 seconds. Mythic: Packages grant a 50% attack speed boost for 25 seconds, decaying for 60 seconds. Ancestral: Packages grant a 50% attack speed boost for 30 seconds, decaying for 60 seconds.
+Substats: Generator Package Chance: Epic +5%; Legendary +8%; Mythic +11%; Ancestral +15%.
+Relics: None.
+Vault: None.
+Perks: None.
+Footguns: Proc chance is bursty and the cited cap depends on lab, card, and substat stacking.
+
+Mechanic: Enemy Attack Level Skip
+Type: Workshop
+Category: Utility
+Aliases: eals
+Definition: Enemy Attack Level Skip is the chance to skip an enemy attack-level increase after a wave.
+Formula:
+Wave Skip can trigger additional skip checks for skipped waves.
+The source material treats these skips as deterministic patterns rather than true RNG at fixed percentages.
+Workshop:
+Unlocked by Enemy Level Skip.
+699 workshop levels.
+Starts at 0.05%; each level adds 0.05% for 35.00% total chance.
+Enhancements: Enemy Level Skip Enhancement: 60 upgrades available on the shared enhancement row.
+Labs: Enemy Attack Level Skip.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Pulsar Harvester. Epic: Each time a projectile hits an enemy, there is a 1% chance that it will reduce the enemy's Health and Attack level by 1. Legendary: Each time a projectile hits an enemy, there is a 1.5% chance that it will reduce the enemy's Health and Attack level by 1. Mythic: Each time a projectile hits an enemy, there is a 2% chance that it will reduce the enemy's Health and Attack level by 1. Ancestral: Each time a projectile hits an enemy, there is a 2.5% chance that it will reduce the enemy's Health and Attack level by 1.
+Substats: Generator Enemy Attack Level Skip: Epic +2%; Legendary +4%; Mythic +6%; Ancestral +8%.
+Relics: Epic: 1 relic at 2%.
+Vault: Power: 0.5% Enemy Attack Skip (3 upgrades).
+Perks: None.
+Footguns: The source material treats these skips as deterministic patterns rather than true RNG at fixed percentages.
+
+Mechanic: Enemy Health Level Skip
+Type: Workshop
+Category: Utility
+Aliases: ehls
+Definition: Enemy Health Level Skip is the chance to skip an enemy health-level increase after a wave.
+Formula:
+Wave Skip can trigger additional skip checks for skipped waves.
+The source material treats these skips as deterministic patterns rather than true RNG at fixed percentages.
+Workshop:
+Unlocked by Enemy Level Skip.
+699 workshop levels.
+Starts at 0.05%; each level adds 0.05% for 35.00% total chance.
+Enhancements: Enemy Level Skip Enhancement: 60 upgrades available on the shared enhancement row.
+Labs: Enemy Health Level Skip.
+Cards: None.
+Masteries: None.
+Modules:
+Generator category.
+Unique modules: Pulsar Harvester. Epic: Each time a projectile hits an enemy, there is a 1% chance that it will reduce the enemy's Health and Attack level by 1. Legendary: Each time a projectile hits an enemy, there is a 1.5% chance that it will reduce the enemy's Health and Attack level by 1. Mythic: Each time a projectile hits an enemy, there is a 2% chance that it will reduce the enemy's Health and Attack level by 1. Ancestral: Each time a projectile hits an enemy, there is a 2.5% chance that it will reduce the enemy's Health and Attack level by 1.
+Substats: Generator Enemy Health Level Skip: Epic +2%; Legendary +4%; Mythic +6%; Ancestral +8%.
+Relics: Epic: 1 relic at 2%.
+Vault: Power: 0.5% Enemy Health Skip (3 upgrades).
+Perks: None.
+Footguns: The source material treats these skips as deterministic patterns rather than true RNG at fixed percentages.
+
+Workshop Enhancement
+Workshop Enhancements also have the same 3 types: Attack, Defense and Utility. New Enhancements of each are unlocked by spending coins on other enhancements of the same type.
+
+Unlock
+Workshop Enhancements are unlocked at tier 12 wave 60. Requires the Workshop Enhancement lab to be completed.
+
+Level  Time  Cost  Value
+1  6d 15h 59m  5,000,000,000  Unlocked
+
+Workshop Enhancement Unlocks
+
+Attack Enhancement
+Damage
+Unlocked for free after Workshop Enhancements are researched. Starts at 1x and increases by 0.01x per level. Has a max of 400 levels for x5.
+Rend Armor
+Requires 50 billion coins to be spent on damage enhancements to unlock. Applies a multiplier to Rend Max, chance, and Mult of x1 when unlocked and increases by 0.01x per level. Has a maximum level of 400 for a 5x bonus.
+Critical Factor
+Requires 500 billion coins to be spent on enhancements to unlock. Increases Crit Factor by 1.0x when unlocked and increases by 0.1 per level. Has 400 levels for a maximum of x5.
+Damage/Meter
+Requires 5 trillion coins to be spent on attack enhancements to unlock. Increases the Damage/Meter multiplier by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 400 for a 5x bonus.
+Super Crit Multi
+Requires 50 Trillion coins to be spent on enhancements to unlock. Increases Super Crit Multi by x1.0 when unlocked and increases by 0.1 per level. Has a maximum of 400 levels for a x5 multiplier.
+Attack Speed
+Requires 500 Trillion coins to be spent on enhancements to unlock. Increases Attack Speed by x1.0 when unlocked and increases by 0.01 per level. Has 75 levels for a max of 1.75x.
+
+Defense Enhancement
+Health
+Health enhancement is unlocked for free after completing the Workshop Enhancement Labs. Increases Health by x1 when unlocked and increases by 0.01x per level. Has a maximum of 400 levels for a multiplier of x5.00.
+Health Regen
+Requires 50 billion coins to be spent on defense enhancements to unlock. Increases the health regen multiplier by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 400 for a 5x bonus.
+Defense Absolute
+Requires 500 billion coins to be spent on defense enhancements to unlock. Increases the Defense Absolute multiplier by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 400 for a 5x bonus.
+Land Mine Damage
+Requires 5 trillion coins to be spent on defense enhancements to unlock. Increases Land Mine Damage multiplier by x1 when unlocked and increases by 0.06x per level. Has a maximum level of 400 for a 25x bonus.
+Wall Health
+Requires 50 trillion coins to be spent on defense enhancements to unlock. Increases Wall Health by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 400 for a 5x bonus.
+Orb Size
+Requires 500 trillion coins to be spent on defense enhancements to unlock. Increases Orb Size by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 200 for 3x orb size.
+
+Utility Enhancement
+Cash Bonus
+Cash Bonus enhancement is unlocked for free after completing the Workshop Enhancement Labs. Increases the Cash Bonus multiplier by x1 when unlocked and increases by 0.01x per level. The Cash workshop enhancement also increases the cash per wave, interest percentage, and max interest per wave amount by 1% each upgrade as well. Has a maximum level of 400 for a 5x bonus.
+Coin Bonus
+Requires 50 billion coins to be spent on Utility enhancements to unlock. Increases the Coin Bonus multiplier by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 200 for a 3x bonus. Note: Coin Bonus enhancement affects tier bonus and Coins/kill. This means the overall benefit of Coin Bonus enhancement is squared.
+Cells/Kill Bonus
+Requires 500 billion coins to be spent on Utility enhancements to unlock. Increases Cells/Kill by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 200 for a 3x bonus.
+Free Upgrades
+Requires 5 trillion coins to be spent on Utility enhancements to unlock. Increases all Free Upgrades by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 100 for a 2x bonus.
+Packages
+Requires 50 trillion coins to be spent on Utility enhancements to unlock. Increases Max Recovery Package and Recovery Amount by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 300 for a 4x bonus.
+Enemy Level Skips
+Requires 500 trillion coins to be spent on Utility enhancements to unlock. Increases Enemy Health and Enemy Damage Level Skip multiplier by x1 when unlocked and increases by 0.01x per level. Has a maximum level of 60 for a 1.6x bonus.
+
+

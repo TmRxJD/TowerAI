@@ -1,0 +1,485 @@
+# Cards Structured Reference
+
+This file reorganizes card knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/cards for side-by-side comparison.
+
+Mechanic: Cards
+Type: System
+Domain: Gems
+Section: Cards
+Category: Progression
+Aliases: none.
+Definition: Cards are equipable gem purchases that grant effects while slotted.
+Behavior:
+Cards cost 20 Gems per purchase.
+Cards grant their effect only while equipped.
+Cards have rarity buckets and are drawn from those buckets when purchased.
+Cards can be upgraded through duplicate copies up to max level 7.
+
+Mechanic: Card Locking
+Type: Rule
+Domain: Cards
+Section: Cards
+Category: Loadout Rules
+Aliases: locked cards
+Definition: Card Locking prevents equipped cards from being removed or swapped while the lock condition is active.
+Behavior:
+Cards with the locked icon can never be removed during the run.
+When a Boss or Fleet Enemy is alive, all cards become locked until those enemies are gone.
+Presets can only be swapped during a run if the locked card set stays identical.
+
+Mechanic: Card Slots
+Type: Capacity
+Domain: Cards
+Section: Cards
+Category: Loadout Capacity
+Aliases: card slots
+Definition: Card Slots determine how many cards can be equipped at once.
+Behavior:
+Gem purchases raise card slots up to 22.
+Harmony tech tree keys can raise total slots to 28.
+The total Gem cost to reach 22 purchased slots is 58,400 Gems.
+
+Mechanic: Card Slot Costs
+Type: Cost Ladder
+Domain: Gems
+Section: Cards
+Category: Loadout Capacity
+Aliases: slot costs
+Definition: Card Slot Costs are the Gem costs for each additional card slot.
+Costs:
+Slot 1 is free.
+Slots 2 through 22 cost 50, 100, 200, 300, 400, 500, 600, 750, 1000, 1200, 1400, 1600, 1800, 2500, 3500, 4500, 5500, 6500, 7500, 8500, and 10000 Gems.
+
+Mechanic: Card Star Costs
+Type: Copy Cost Ladder
+Domain: Gems
+Section: Cards
+Category: Upgrade Costs
+Aliases: star costs; copy costs
+Definition: Card Star Costs describe how many copies and Gems are needed to raise a card through its star ladder.
+Costs:
+Unlocking a card costs 20 Gems for the first copy.
+2-star needs 3 copies and 40 Gems.
+3-star needs 5 copies and 100 Gems.
+4-star needs 8 copies and 160 Gems.
+5-star needs 12 copies and 240 Gems.
+6-star needs 20 copies and 400 Gems.
+7-star needs 32 copies and 640 Gems.
+Maxing one card takes 80 copies and 1600 Gems total.
+With 31 cards, maxing the full set costs 49,600 Gems.
+
+Mechanic: Card Buying
+Type: Draw System
+Domain: Gems
+Section: Cards
+Category: Acquisition
+Aliases: buy card; draw rates
+Definition: Card Buying selects a rarity first and then a card within that rarity pool.
+Behavior:
+Base rarity chances are Common 80%, Rare 17%, and Epic 3%.
+Maxed cards are removed from the draw pool.
+If all Commons are maxed, Rare draw chance rises to 97%.
+If all cards are maxed, the buy card button can no longer be used.
+If the buy-card event mission is active after all cards are bought, it completes instantly.
+
+Mechanic: Card Milestone Unlocks
+Type: Unlock Rule
+Domain: Milestones
+Section: Cards
+Category: Acquisition Gates
+Aliases: milestone cards
+Definition: Card Milestone Unlocks gate specific cards behind milestone requirements before they can enter the draw pool.
+Behavior:
+Recovery Package Chance unlocks at Tier 2 Wave 750.
+Land Mine Stun unlocks at Tier 7 Wave 250.
+Nuke unlocks at Tier 11 Wave 10.
+Ultimate Crit unlocks at Tier 14 Wave 50.
+Area of Effect unlocks at Tier 20 Wave 80.
+If every currently available card is maxed before another milestone card unlocks, card buying stalls until the next milestone gate is cleared.
+Death Ray does not have a lower draw rate than normal Epics and does not need a special unlock.
+
+Mechanic: Card Mastery Unlock
+Type: Progression Unlock
+Domain: Cards
+Section: Cards
+Category: Masteries
+Aliases: card mastery
+Definition: Card Mastery Unlock enables per-card mastery upgrades once late-game card progression conditions are met.
+Behavior:
+Card Mastery Unlock requires 30 cards maxed and the Tier 16 Wave 100 milestone.
+Each card mastery is unlocked individually on the cards page.
+A mastery only applies while its card is equipped.
+Unlocking a mastery costs stones and also unlocks that card's mastery labs.
+
+Mechanic: Damage
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: dmg
+Definition: Damage is a common card that increases tower damage while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Damage+ increases the Damage card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Attack Speed
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: as
+Definition: Attack Speed is a common card that increases tower attack speed while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Attack Speed+ increases the Attack Speed card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Health
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: hp
+Definition: Health is a common card that increases tower health while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Health+ increases the Health card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Health Regen
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: regen
+Definition: Health Regen is a common card that increases tower health regeneration while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Health Regen+ increases the Health Regen card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Range
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: range
+Definition: Range is a common card that increases tower maximum range while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Damage / Meter adds an additional multiplier to Damage / Meter.
+Interaction Mechanics: Damage / Meter
+Interactions: Range changes the tower range baseline, and the Damage / Meter mastery on Range specifically adds another multiplier to Damage / Meter while Range is equipped and mastered.
+
+Mechanic: Cash
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: cash
+Definition: Cash is a common card that increases cash earned while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Elite Farming adds a chance for Elites to drop Reroll Dice.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Coins
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: coins
+Definition: Coins is a common card that increases coin income while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Coins+ increases the Coins card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Slow Aura
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: sa
+Definition: Slow Aura is a common card that slows enemies inside tower range while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Slow Attack adds additional attack delay to slowed enemies.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Critical Chance
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: crit-chance
+Definition: Critical Chance is a common card that raises critical chance while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Slow Attack adds bonus Critical Chance, Super Crit Chance, and Super Crit Factor.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Enemy Balance
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: eb
+Definition: Enemy Balance is a common card that raises enemy spawn count and cash per kill while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Elite Balance adds a chance to double spawn Elites.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Extra Defense
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: def
+Definition: Extra Defense is a common card that raises defense percent while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Extra Defense+ increases the Extra Defense card's stat multiplier.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Fortress
+Type: Card
+Domain: Cards
+Section: Common Cards
+Category: Common
+Aliases: fort
+Definition: Fortress is a common card that raises defense absolute while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Fortress Walls reduces Wall rebuild time.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Free Upgrades
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: freeups
+Definition: Free Upgrades is a rare card that increases all free-upgrade chances per wave while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Locked Upgrade adds locked stats that free upgrades cannot affect.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Extra Orb
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: x-orb
+Definition: Extra Orb is a rare card that adds a spinning orb while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Coin Orb adds a coin bonus to enemies hit by orbs.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Plasma Cannon
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: pc
+Definition: Plasma Cannon is a rare card that fires a boss-damaging plasma shot.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Elite Cannon lets Plasma Cannon also fire at Elites for percent damage.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Critical Coin
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: crit-coin
+Definition: Critical Coin is a rare card that gives basic enemies killed by critical damage a chance to drop coins.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Double Coins adds a chance to drop 2 coins instead of 1.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Wave Skip
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: ws
+Definition: Wave Skip is a rare card that gives a chance to skip waves while still paying out extra wave value.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Double Wave Skip adds a separate chance to double wave skip.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Intro Sprint
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: is
+Definition: Intro Sprint is a rare card that rapidly advances early waves while equipped.
+Unlock Requirement: Available from the standard card pool.
+Mastery: Warp Speed dramatically increases how many waves Intro Sprint stays active.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Land Mine Stun
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: lms
+Definition: Land Mine Stun is a rare card that gives land mines a chance to stun enemies.
+Unlock Requirement: Unlocks through Card Milestone Unlocks at Tier 7 Wave 250 before it can enter card buying.
+Mastery: Flashbang gives enemies stunned by a Land Mine a chance to miss attacks.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Recovery Package Chance
+Type: Card
+Domain: Cards
+Section: Rare Cards
+Category: Rare
+Aliases: rpc
+Definition: Recovery Package Chance is a rare card that increases recovery package spawn chance.
+Unlock Requirement: Unlocks through Card Milestone Unlocks at Tier 2 Wave 750 before it can enter card buying.
+Mastery: Care Package gives packages a chance to also deliver a common module.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Death Ray
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: dr
+Definition: Death Ray is an epic card that adds a ray which destroys non-boss enemies on contact for its active duration.
+Unlock Requirement: Available from the standard epic card pool without a special unlock.
+Mastery: Enhanced Ray adds a chance for Death Ray to partially pierce Protector shields.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Energy Net
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: en
+Definition: Energy Net is an epic card that immobilizes a boss for its active duration.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Electrified Net adds a boss damage multiplier while the net is active and lingers briefly after.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Super Tower
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: st
+Definition: Super Tower is an epic card that temporarily multiplies tower projectile damage.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Ultimate Tower causes part of Super Tower's multiplier to increase Ultimate Weapon damage and lowers Super Tower cooldown.
+Interaction Mechanics: Ultimate Weapons
+Interactions: Super Tower increases tower projectile damage on its own, and the Ultimate Tower mastery extends Super Tower into Ultimate Weapons by converting part of the Super Tower multiplier into Ultimate Weapons damage support.
+
+Mechanic: Second Wind
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: sw
+Definition: Second Wind is an epic card that revives the tower once per round with an invincible shield.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Angel Wings unlocks a lingering health regeneration buff after activation.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Demon Mode
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: dm
+Definition: Demon Mode is an epic card that grants temporary invincibility and high damage once per round.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Demon Revenge unlocks a lingering damage buff after activation.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Energy Shield
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: es
+Definition: Energy Shield is an epic card that blocks a single hit and then recharges after its timer.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Repel creates a blast that knocks enemies back and clears projectiles when Energy Shield activates.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Wave Accelerator
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: wa
+Definition: Wave Accelerator is an epic card that reduces the cooldown between waves.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Spawn Accelerator increases how quickly spawn rates accelerate into earlier waves.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Berzerker
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: zerk
+Definition: Berzerker is an epic card that converts absorbed damage into a damage bonus up to its cap.
+Unlock Requirement: Available from the standard epic card pool.
+Mastery: Viking Funeral raises the cap dramatically for a duration when Death Defy activates.
+Interaction Mechanics: Death Defy
+Interactions: Berzerker stores absorbed damage up to its cap, and Viking Funeral lets Death Defy temporarily expand that Berzerker cap when Death Defy triggers.
+
+Mechanic: Ultimate Crit
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: uwc
+Definition: Ultimate Crit is an epic card that gives Ultimate Weapons a chance to critically hit using current tower critical factor.
+Unlock Requirement: Unlocks through Card Milestone Unlocks at Tier 14 Wave 50 before it can enter card buying.
+Mastery: Ultimate Crit+ increases the Ultimate Crit card's stat multiplier.
+Interaction Mechanics: Ultimate Weapons; Critical Factor
+Interactions: Ultimate Crit only matters when Ultimate Weapons deal damage, and Ultimate Crit uses the tower's Critical Factor to determine the critical damage multiplier applied to Ultimate Weapons when the proc happens.
+
+Mechanic: Nuke
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: nuke
+Definition: Nuke is an epic card that destroys a percentage of on-screen enemies.
+Unlock Requirement: Unlocks through Card Milestone Unlocks at Tier 11 Wave 10 before it can enter card buying.
+Mastery: Radiation unlocks a lingering attack-speed slow after the Nuke.
+Interaction Mechanics: none.
+Interactions: none.
+
+Mechanic: Area of Effect
+Type: Card
+Domain: Cards
+Section: Epic Cards
+Category: Epic
+Aliases: aoe
+Definition: Area of Effect is an epic card that increases damage area-of-effect scaling for several mechanics.
+Unlock Requirement: Unlocks through Card Milestone Unlocks at Tier 20 Wave 80 before it can enter card buying.
+Mastery: Blast Zone increases the range of all damage area effects.
+Interaction Mechanics: Inner Land Mines; Poison Swamp; Smart Missiles; Flame Bot; Land Mines
+Interactions: Area of Effect increases area damage scaling for Inner Land Mines, Poison Swamp, Smart Missiles, Flame Bot, and Land Mines, and the Blast Zone mastery further increases the size of those damage area effects.

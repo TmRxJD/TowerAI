@@ -4,7 +4,7 @@
   "repo": {
     "owner": "TmRxJD",
     "name": "TowerAI",
-    "ref": "main"
+    "ref": "5afa9b71d9b5c8bd43b71c43b21d8b1861119054"
   },
   "providers": {
     "gte-small": {
@@ -12,14 +12,14 @@
       "updatedAtIso": "2026-03-18T16:41:43.960Z",
       "knowledgeBundleVersion": "trackerai-canonical-2.0.0-1456-774105611",
       "files": {
-        "versionUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.version.txt",
-        "metadataUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.metadata.json",
-        "chunksUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.chunks.json",
-        "indexUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.index.json"
+        "versionUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/5afa9b71d9b5c8bd43b71c43b21d8b1861119054/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.version.txt",
+        "metadataUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/5afa9b71d9b5c8bd43b71c43b21d8b1861119054/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.metadata.json",
+        "chunksUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/5afa9b71d9b5c8bd43b71c43b21d8b1861119054/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.chunks.json",
+        "indexUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/5afa9b71d9b5c8bd43b71c43b21d8b1861119054/artifacts/kb/gte-small/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-small-8e16cdcb986a/trackerai-kb.index.json"
       },
       "modelAsset": {
         "sourceModelId": "Xenova/gte-small",
-        "rootUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/models/gte-small",
+        "rootUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/5afa9b71d9b5c8bd43b71c43b21d8b1861119054/artifacts/models/gte-small",
         "files": [
           "config.json",
           "tokenizer.json",
@@ -28,17 +28,6 @@
         ],
         "primaryFile": "onnx/model.onnx",
         "lfs": true
-      }
-    },
-    "gte-base": {
-      "version": "trackerai-canonical-2.0.0-1456-774105611-xenova-gte-base-8d9459bcca07",
-      "updatedAtIso": "2026-03-17T05:57:47.946Z",
-      "knowledgeBundleVersion": "trackerai-canonical-2.0.0-1456-774105611",
-      "files": {
-        "versionUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-base/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-base-8d9459bcca07/trackerai-kb.version.txt",
-        "metadataUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-base/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-base-8d9459bcca07/trackerai-kb.metadata.json",
-        "chunksUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-base/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-base-8d9459bcca07/trackerai-kb.chunks.json",
-        "indexUrl": "https://raw.githubusercontent.com/TmRxJD/TowerAI/main/artifacts/kb/gte-base/trackerai-canonical-2.0.0-1456-774105611-xenova-gte-base-8d9459bcca07/trackerai-kb.index.json"
       }
     }
   }

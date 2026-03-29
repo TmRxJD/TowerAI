@@ -1,0 +1,263 @@
+# Guilds Structured Reference
+
+This file reorganizes guild and guardian knowledge into the same keyed mechanic format used by other deterministic knowledge sources.
+The original raw source remains preserved in public/knowledge/guilds for side-by-side comparison.
+
+Mechanic: Guilds
+Type: System
+Domain: Social Progression
+Section: Guilds
+Category: Social
+Aliases: none.
+Definition: Guilds are a seasonal social progression system that grants shared participation rewards, guild-shop access, and guardians.
+Behavior:
+Guilds unlock at Milestone Tier 3 Wave 10.
+Players can join an existing guild or create their own guild.
+Each guild supports up to 30 players.
+Joining a guild opens guild rewards, guild-shop purchases, and guardians.
+
+Mechanic: Guild Creation
+Type: Access Rule
+Domain: Guilds
+Section: Guilds
+Category: Membership
+Aliases: create guild
+Definition: Guild Creation lets a player found a new guild with its own setup and join rules.
+Behavior:
+Creating a guild costs 50 gems.
+The creator chooses the guild name, description, and icon.
+Join policy can be Free, With Approval, or Invitation Only.
+
+Mechanic: Guild Joining
+Type: Access Rule
+Domain: Guilds
+Section: Guilds
+Category: Membership
+Aliases: join guild
+Definition: Guild Joining is the process of finding a guild and entering it under that guild's join rules.
+Behavior:
+Players can search the available guild list and request to join shown guilds.
+Free guilds allow immediate entry.
+With Approval guilds require leader approval.
+Invitation Only guilds do not appear in the public guild list.
+
+Mechanic: Guild Rewards
+Type: Reward System
+Domain: Guilds
+Section: Guilds
+Category: Rewards
+Aliases: guild reward rules
+Definition: Guild Rewards are the recurring resource payouts and unlocks tied to guild participation.
+Behavior:
+Joining a guild gives access to guardians.
+Guild contribution is earned from Weekly Challenge boxes.
+Coin reward scales from the player's highest unlocked tier.
+Players can reference Daily Missions to see their base coin reward.
+
+Mechanic: Guild Contribution
+Type: Progress Metric
+Domain: Guilds
+Section: Guilds
+Category: Rewards
+Aliases: contribution
+Definition: Guild Contribution is the weekly participation total used to unlock guild reward chests.
+Behavior:
+Guild contribution is earned from Weekly Challenge boxes.
+Weekly reward chest breakpoints are 100, 250, 500, and 750 contribution.
+Higher contribution unlocks more tokens, bits, coins, and gems.
+
+Mechanic: Guild Weekly Reward Chests
+Type: Reward Table
+Domain: Guilds
+Section: Guilds
+Category: Rewards
+Aliases: weekly guild chests; guild chest rewards
+Definition: Guild Weekly Reward Chests are the four contribution-based payout tiers for guild participation.
+Behavior:
+100 contribution gives 10 tokens, 10 bits, 1x coins, and 5 gems.
+250 contribution gives 20 tokens, 25 bits, 2x coins, and 10 gems.
+500 contribution gives 40 tokens, 50 bits, 3x coins, and 15 gems.
+750 contribution gives 80 tokens, 100 bits, 5x coins, and 30 gems.
+Claiming all four chests totals 150 tokens, 185 bits, 11x coins, and 60 gems.
+
+Mechanic: Guild Seasons
+Type: Seasonal Rule
+Domain: Guilds
+Section: Guilds
+Category: Seasons
+Aliases: guild season
+Definition: Guild Seasons are the repeating time window that controls guild shops, guild themes, and token carryover.
+Behavior:
+Each guild season lasts 8 weeks.
+Guild-shop purchase ladders reset at the beginning of the next season.
+Guild themes rotate by season and can be missed.
+Unused guild tokens are resolved through guild token cashout when the season ends.
+
+Mechanic: Guild Token Cashout
+Type: Conversion Rule
+Domain: Guilds
+Section: Guilds
+Category: Seasons
+Aliases: token cashout; token conversion
+Definition: Guild Token Cashout converts leftover guild tokens into gems automatically when a guild season ends.
+Behavior:
+Unspent guild tokens convert to gems at a 5 to 1 ratio.
+The result rounds up to the next whole gem.
+Five guild tokens become one gem.
+Cashout happens automatically at the end of each 8-week guild season.
+
+Mechanic: Guild Shop
+Type: Store
+Domain: Guilds
+Section: Guilds
+Category: Purchases
+Aliases: guild store
+Definition: Guild Shop is the seasonal store that spends guild tokens on currencies, cosmetics, relics, and guardian-chip unlocks.
+Behavior:
+Guild shop purchases spend guild tokens.
+The shop offers currencies, themes, relics, and chips.
+Currency purchase ladders reset at the start of the next guild season.
+
+Mechanic: Guild Shop Currency Purchases
+Type: Cost Ladder
+Domain: Guild Tokens
+Section: Guilds
+Category: Purchases
+Aliases: guild currency costs; guild shop costs
+Definition: Guild Shop Currency Purchases are the seasonal token ladders for bits, gems, and shards.
+Behavior:
+Currencies available are bits, gems, and shards.
+Guild-token exchange gives 100 gems or 250 shards.
+There are four shard types, and only the purchased shard type increases in cost.
+Each listed currency purchase is capped at three buys per season.
+Costs:
+Bits cost 25, 50, and 75 tokens for purchases one through three.
+Gems cost 15, 25, and 40 tokens for purchases one through three.
+Shards cost 5, 10, and 15 tokens for purchases one through three.
+
+Mechanic: Guild Themes
+Type: Cosmetic Rotation
+Domain: Guilds
+Section: Guilds
+Category: Purchases
+Aliases: guild skins; seasonal themes
+Definition: Guild Themes are seasonal cosmetic purchases sold in the guild shop and kept permanently once bought.
+Behavior:
+Themes rotate every guild season and may be missed.
+One tower theme costs 100 tokens.
+One background theme costs 100 tokens.
+One menu theme costs 100 tokens.
+One guardian skin costs 150 tokens.
+Purchased themes remain available forever.
+
+Mechanic: Guild Relics
+Type: Limited Purchase
+Domain: Guilds
+Section: Guilds
+Category: Purchases
+Aliases: guild relics
+Definition: Guild Relics are limited relic purchases sold through the guild shop at seasonal token price points.
+Behavior:
+Guild relics are sold at 75-token and 150-token price points.
+Guild relics may be limited to the event that sponsors them.
+Guild relic offers can be seasonal or time-limited.
+
+Mechanic: Guardians
+Type: Companion System
+Domain: Guilds
+Section: Guilds
+Category: Guardians
+Aliases: guardian system
+Definition: Guardians are temporary-bonus guild companions with upgradeable chip stats and unlockable chip slots.
+Behavior:
+Joining a guild gives access to guardians.
+Guardians are similar to bots and provide temporary bonuses while active.
+Guardian chip slots can be unlocked up to four total.
+Guardian chip upgrades cost bits.
+
+Mechanic: Guardian Chips
+Type: Upgrade System
+Domain: Guardians
+Section: Guilds
+Category: Guardians
+Aliases: guardian upgrades; guardian chips
+Definition: Guardian Chips are the guardian abilities and upgrade lines that define each guardian's effect, cooldown, and secondary stat.
+Behavior:
+Ally and Attack unlock when guardians unlock.
+Bounty, Fetch, Scout, and Summon are purchased in the guild shop for 200 tokens each.
+Guardian chip upgrades cost bits.
+Each guardian has three core upgrade stats with separate level caps and cost ladders.
+
+Mechanic: Attack Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Attack
+Definition: Attack Guardian attacks nearby enemies and deals damage equal to a percentage of the damage they have already taken.
+Behavior:
+Its three upgrade stats are Percentage, Cooldown, and Targets.
+Base values are Percentage 1%, Cooldown 120s, and Targets 1.
+Higher levels raise Percentage, reduce Cooldown, and increase Targets until each stat reaches its own cap.
+
+Mechanic: Ally Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Ally
+Definition: Ally Guardian converts an enemy into an ally recovery package that can heal the tower beyond basic maximum recovery.
+Behavior:
+Its three upgrade stats are Recovery Amount, Max Recovery, and Cooldown.
+Base values are Recovery Amount 1%, Max Recovery x1.1, and Cooldown 120s.
+Higher levels increase healing values and reduce Cooldown until each stat reaches its own cap.
+
+Mechanic: Bounty Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Bounty
+Definition: Bounty Guardian places a bounty on nearby non-common enemies so they grant more coins on death.
+Behavior:
+Its three upgrade stats are Multiplier, Cooldown, and Targets.
+Base values are Multiplier x0.01, Cooldown 120s, and Targets 1.
+Higher levels raise Multiplier, reduce Cooldown, and increase Targets until each stat reaches its own cap.
+
+Mechanic: Fetch Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Fetch
+Definition: Fetch Guardian locates and retrieves hidden loot such as coins, gems, medals, shards, and modules.
+Behavior:
+Its three upgrade stats are Cooldown, Find Chance, and Double Find Chance.
+Base values are Cooldown 120s, Find Chance 10%, and Double Find Chance 2%.
+Higher levels reduce Cooldown and improve both loot-find stats until each stat reaches its own cap.
+
+Mechanic: Scout Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Scout
+Definition: Scout Guardian treats enemies as being farther from the tower for damage calculations while the guardian is active.
+Behavior:
+Its three upgrade stats are Cooldown, Range Bonus, and Duration.
+Base values are Cooldown 105s, Range Bonus x2.0, and Duration 5s.
+Scout Guardian was introduced in Guild Season 7.
+Higher levels reduce Cooldown and increase both Range Bonus and Duration until each stat reaches its own cap.
+
+Mechanic: Summon Guardian
+Type: Guardian Chip
+Domain: Guardians
+Section: Guilds
+Category: Guardian
+Aliases: Summon
+Definition: Summon Guardian creates extra basic, ranged, tank, and fast enemies while active and applies a cash bonus to enemies during the summon window.
+Behavior:
+Its three upgrade stats are Duration, Cooldown, and Cash Bonus.
+Base values are Duration 5s, Cooldown 140s, and Cash Bonus x1.00.
+Summoned enemies cannot become Ultimate from a battle condition.
+Higher levels extend Duration, reduce Cooldown, and increase Cash Bonus until each stat reaches its own cap.

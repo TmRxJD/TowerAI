@@ -1,0 +1,2 @@
+overrides:
+  '@tmrxjd/platform': link:../../TrackerWebsite/the-tower-run-tracker/packages/platform

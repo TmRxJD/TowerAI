@@ -1,23 +1,62 @@
-import { towerAiPlatformToolRequestSchema, type TowerAiPlatformToolRequest, type TowerAiPlatformToolResult } from './contracts'
-import { buildChartTablePreview, listChartCatalog } from './chartTools'
 import {
+  towerAiPlatformToolNameSet,
+  towerAiPlatformToolNames,
+  towerAiPlatformToolRequestSchema,
+  type TowerAiPlatformToolRequest,
+  type TowerAiPlatformToolResult,
+} from './contracts'
+import { browseChartCatalog, buildChartTablePreview, listChartCatalog } from './chartTools'
+import {
+  buildCalcRunPreview,
   buildBotCostPreview,
+  buildGuardianCostPreview,
   buildLabProgressPreview,
   buildModuleCostPreview,
   buildShardSplitPreview,
   buildThornsBasePreview,
   buildThornsWallPreview,
+  buildUptimeProjectionPreview,
   buildWorkshopCostPreview,
 } from './calculatorTools'
 
+export const towerAiExecutedToolNames = [...towerAiPlatformToolNames]
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === 'object'
+}
+
+function isToolName(value: unknown): value is TowerAiPlatformToolRequest['tool'] {
+  return typeof value === 'string' && towerAiPlatformToolNameSet.has(value as TowerAiPlatformToolRequest['tool'])
+}
+
+function getChartEntryCount(data: unknown): number {
+  if (!isRecord(data)) return 0
+  if (Array.isArray(data.categories)) return data.categories.length
+  if (Array.isArray(data.items)) return data.items.length
+  if (Array.isArray(data.paths)) return data.paths.length
+  return 0
+}
+
+function getFallbackToolName(requestLike: unknown): TowerAiPlatformToolRequest['tool'] {
+  if (!isRecord(requestLike) || !isToolName(requestLike.tool)) {
+    return 'chart.catalog.list'
+  }
+
+  return requestLike.tool
+}
+
 function summarizeResult(tool: TowerAiPlatformToolRequest['tool'], data: unknown): string {
   switch (tool) {
+    case 'chart.browse':
+      return 'Resolved shared chart selection'
     case 'chart.catalog.list': {
-      const record = data as { categories?: unknown[]; items?: unknown[]; paths?: unknown[] }
-      return `Resolved ${record.categories?.length ?? record.items?.length ?? record.paths?.length ?? 0} chart entries`
+      const total = getChartEntryCount(data)
+      return `Resolved ${total} chart entries`
     }
     case 'chart.preview.table':
       return 'Resolved shared chart table preview'
+    case 'calc.run':
+      return 'Calculated schema-driven tool result'
     case 'calc.module.costs':
       return 'Calculated module upgrade costs'
     case 'calc.workshop.costs':
@@ -28,6 +67,10 @@ function summarizeResult(tool: TowerAiPlatformToolRequest['tool'], data: unknown
       return 'Calculated lab progression rows'
     case 'calc.bot.costs':
       return 'Calculated bot upgrade costs'
+    case 'calc.guardian.costs':
+      return 'Calculated guardian upgrade costs'
+    case 'calc.uptime.project':
+      return 'Calculated uptime projection'
     case 'calc.thorns.wall':
       return 'Calculated thorns wall chart'
     case 'calc.thorns.base':
@@ -38,12 +81,22 @@ function summarizeResult(tool: TowerAiPlatformToolRequest['tool'], data: unknown
 function executeParsedRequest(request: TowerAiPlatformToolRequest): TowerAiPlatformToolResult {
   try {
     switch (request.tool) {
-      case 'chart.catalog.list':
+      case 'chart.browse':
         return {
           success: true,
           tool: request.tool,
           summary: summarizeResult(request.tool, request.args),
-          data: listChartCatalog(request.args),
+          data: browseChartCatalog(request.args),
+        }
+      case 'chart.catalog.list':
+        {
+          const data = listChartCatalog(request.args)
+        return {
+          success: true,
+          tool: request.tool,
+          summary: summarizeResult(request.tool, data),
+          data,
+        }
         }
       case 'chart.preview.table':
         return {
@@ -51,6 +104,13 @@ function executeParsedRequest(request: TowerAiPlatformToolRequest): TowerAiPlatf
           tool: request.tool,
           summary: summarizeResult(request.tool, request.args),
           data: buildChartTablePreview(request.args),
+        }
+      case 'calc.run':
+        return {
+          success: true,
+          tool: request.tool,
+          summary: summarizeResult(request.tool, request.args),
+          data: buildCalcRunPreview(request.args),
         }
       case 'calc.module.costs':
         return {
@@ -87,6 +147,20 @@ function executeParsedRequest(request: TowerAiPlatformToolRequest): TowerAiPlatf
           summary: summarizeResult(request.tool, request.args),
           data: buildBotCostPreview(request.args),
         }
+      case 'calc.guardian.costs':
+        return {
+          success: true,
+          tool: request.tool,
+          summary: summarizeResult(request.tool, request.args),
+          data: buildGuardianCostPreview(request.args),
+        }
+      case 'calc.uptime.project':
+        return {
+          success: true,
+          tool: request.tool,
+          summary: summarizeResult(request.tool, request.args),
+          data: buildUptimeProjectionPreview(request.args),
+        }
       case 'calc.thorns.wall':
         return {
           success: true,
@@ -114,13 +188,9 @@ function executeParsedRequest(request: TowerAiPlatformToolRequest): TowerAiPlatf
 export function executeTowerAiPlatformTool(requestLike: unknown): TowerAiPlatformToolResult {
   const parsed = towerAiPlatformToolRequestSchema.safeParse(requestLike)
   if (!parsed.success) {
-    const fallbackTool = typeof requestLike === 'object' && requestLike && 'tool' in (requestLike as Record<string, unknown>)
-      ? String((requestLike as Record<string, unknown>)['tool'] || 'chart.catalog.list') as TowerAiPlatformToolRequest['tool']
-      : 'chart.catalog.list'
-
     return {
       success: false,
-      tool: fallbackTool,
+      tool: getFallbackToolName(requestLike),
       reason: parsed.error.issues[0]?.message || 'Invalid TowerAI platform tool request',
     }
   }
