@@ -1,9 +1,9 @@
 {
-  "name": "@tmrxjd/towerai",
+  "name": "towerai",
   "version": "0.1.1",
   "private": false,
-  "description": "Reusable TrackerAI core and toolchain extracted from The Tower Run Tracker.",
-  "license": "BUSL-1.1",
+  "description": "TowerAI — assistant core and knowledge-base toolchain for The Tower.",
+  "license": "MIT",
   "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,13 +20,16 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "vite",
-    "playground:dev": "vite",
+    "dev": "node scripts/dev-managed.mjs --force-restart",
+    "dev:app": "vite --host localhost --port 5178 --strictPort",
+    "dev:managed": "node scripts/dev-managed.mjs",
+    "playground:dev": "node scripts/dev-managed.mjs --force-restart",
     "playground:build": "vite build",
     "playground:preview": "vite preview",
     "playground:smoke": "pnpm run build && pnpm run playground:build && node scripts/playground-smoke.mjs",
     "build": "tsc -p tsconfig.build.json",
     "type-check": "tsc -p tsconfig.build.json --noEmit",
+    "typecheck": "pnpm run type-check",
     "lint": "eslint src playground scripts eslint.config.mjs",
     "kb:validate:canonical": "pnpm run build && node scripts/validate-canonical-kb.mjs",
     "kb:build:canonical": "pnpm run build && node scripts/build-canonical-kb.mjs",
@@ -89,13 +92,13 @@
   },
   "files": [
     "dist",
-    "artifacts",
     "scripts",
     "src/game-data",
     "src/kb"
   ],
   "dependencies": {
-    "@tmrxjd/platform": "^0.1.8",
+    "@tmrxjd/platform": "0.1.21",
+    "thetowersdk": "^0.5.2",
     "pako": "^2.1.0",
     "zod": "^4.3.6"
   },

@@ -2,7 +2,7 @@
 
 Powered by CatGPT.
 
-TowerAI is the extracted reusable TrackerAI package from The Tower Run Tracker codebase. It packages three closely related pieces of functionality:
+TowerAI is the assistant core extracted from The Tower Run Tracker, published as `towerai` on npm. It packages three closely related pieces of functionality:
 
 - a typed action runtime for building local-first AI control layers in your own app
 - a typed platform tool surface for deterministic chart and calculator execution
@@ -10,15 +10,15 @@ TowerAI is the extracted reusable TrackerAI package from The Tower Run Tracker c
 
 The package currently exposes five public entry points:
 
-- `@tmrxjd/towerai`
-- `@tmrxjd/towerai/core`
-- `@tmrxjd/towerai/tools`
-- `@tmrxjd/towerai/kb`
-- `@tmrxjd/towerai/game-data`
+- `towerai`
+- `towerai/core`
+- `towerai/tools`
+- `towerai/kb`
+- `towerai/game-data`
 
 ## What TowerAI Provides
 
-### `@tmrxjd/towerai/core`
+### `towerai/core`
 
 Use the core entry point when you want to embed TowerAI-style orchestration into your own application.
 
@@ -33,7 +33,7 @@ Core exports include:
 - structured reply and plan validation helpers
 - knowledge bundle loading via `loadTowerAiKbArtifactBundle()`
 
-### `@tmrxjd/towerai/tools`
+### `towerai/tools`
 
 Use the tools entry point when you want deterministic, model-free execution for supported charts and calculators.
 
@@ -45,7 +45,7 @@ Tool exports include:
 - chart helpers such as `listChartCatalog()` and `buildChartTablePreview()`
 - calculator helpers such as `buildLabProgressPreview()` and `buildShardSplitPreview()`
 
-### `@tmrxjd/towerai/kb`
+### `towerai/kb`
 
 Use the KB entry point when you want the bundled canonical knowledge surface, validators, and contributor-facing KB build helpers that ship with the package.
 
@@ -56,7 +56,7 @@ KB exports include:
 - `loadCanonicalKbFromFile()`
 - the bundled canonical KB schema and adapter surface
 
-### `@tmrxjd/towerai/game-data`
+### `towerai/game-data`
 
 Use the game-data entry point when you want the bundled shared tracker and calculator datasets that TowerAI ships for convenience.
 
@@ -118,6 +118,14 @@ Start the local playground dev server:
 ```bash
 pnpm dev
 ```
+
+The TowerAI playground always uses `http://localhost:5178` in development. Running `pnpm dev` again restarts the same port instead of requiring a manual cleanup step.
+
+Common repo commands:
+
+- `pnpm dev` starts the hot-reload playground on `localhost:5178`
+- `pnpm lint` runs the repo ESLint checks
+- `pnpm type-check` runs the package TypeScript check
 
 Run the package lint gate:
 
@@ -248,7 +256,7 @@ Examples:
 
 ## Packaged Tool Registry
 
-The packaged tool surface is typed and schema-validated. These are the supported tool names and argument shapes exported by `@tmrxjd/towerai/tools`.
+The packaged tool surface is typed and schema-validated. These are the supported tool names and argument shapes exported by `towerai/tools`.
 
 ### Chart Tools
 
@@ -479,7 +487,7 @@ This is the lowest-level integration point when you want TowerAI to execute acti
 import {
   createTowerAiRuntime,
   type TowerAiActionDefinition,
-} from '@tmrxjd/towerai/core'
+} from 'towerai/core'
 
 const navigationActions: TowerAiActionDefinition[] = [
   {
@@ -534,7 +542,7 @@ Use the director when you already have a local TowerAI turn executor and want st
 import {
   createTowerAiDirector,
   type TowerAiTurnResult,
-} from '@tmrxjd/towerai/core'
+} from 'towerai/core'
 
 type LocalTrace = {
   prompt: string
@@ -586,7 +594,7 @@ console.log(session.passed, session.steps)
 Use the packaged executor when you want strict deterministic answers for supported charts and calculators.
 
 ```ts
-import { createTowerAiPlatformToolExecutor } from '@tmrxjd/towerai/tools'
+import { createTowerAiPlatformToolExecutor } from 'towerai/tools'
 
 const tools = createTowerAiPlatformToolExecutor()
 
@@ -622,7 +630,7 @@ Use the KB artifact loader when your app wants the same local knowledge bundle s
 import {
   DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER,
   loadTowerAiKbArtifactBundle,
-} from '@tmrxjd/towerai/core'
+} from 'towerai/core'
 
 const bundle = await loadTowerAiKbArtifactBundle({
   provider: DEFAULT_TOWER_AI_KB_ARTIFACT_PROVIDER,
@@ -662,4 +670,4 @@ The local playground reads the knowledge bundle from the checked-in `artifacts/k
 
 ## License
 
-This repository is licensed under BUSL-1.1. See the LICENSE file for the current terms.
+This repository is licensed under the MIT License. See the LICENSE file for the full terms.
